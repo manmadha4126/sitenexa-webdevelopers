@@ -31,8 +31,8 @@ const PortfolioSection = () => {
   return (
     <section id="portfolio" className="section-light py-24 lg:py-32" ref={ref}>
       <div className="container">
-        {/* Project Types heading - left aligned */}
-        <div className="mb-16">
+        {/* Project Types heading - centered */}
+        <div className="mb-16 text-center">
           <span
             className={`inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
               isVisible ? "animate-fade-up" : "opacity-0"
@@ -92,35 +92,33 @@ const PortfolioSection = () => {
           </h2>
         </div>
 
-        {/* Horizontal scrolling cards */}
-        <div
-          ref={scrollRef}
-          className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {myProjects.map((p, i) => (
-            <div
-              key={p.title}
-              className={`group relative overflow-hidden rounded-xl cursor-pointer border border-border hover:shadow-xl hover:shadow-primary/5 transition-shadow duration-300 flex-shrink-0 w-[340px] snap-start ${
-                isVisible ? "animate-fade-up" : "opacity-0"
-              }`}
-              style={{ animationDelay: `${700 + i * 100}ms` }}
-            >
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
+        {/* Auto-scrolling project cards */}
+        <div className="overflow-hidden">
+          <div className="flex gap-6 animate-scroll-left">
+            {[...myProjects, ...myProjects].map((p, i) => (
+              <div
+                key={`mp-${i}`}
+                className={`group relative overflow-hidden rounded-xl cursor-pointer border border-border hover:shadow-xl hover:shadow-primary/5 transition-shadow duration-300 flex-shrink-0 w-[340px] ${
+                  isVisible ? "animate-fade-up" : "opacity-0"
+                }`}
+                style={{ animationDelay: `${700 + (i % myProjects.length) * 100}ms` }}
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-6">
+                  <p className="text-accent text-xs font-semibold uppercase tracking-widest mb-2">{p.category}</p>
+                  <h3 className="text-lg font-semibold mb-2 text-[hsl(210,60%,10%)]">{p.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
+                </div>
               </div>
-              <div className="p-6">
-                <p className="text-accent text-xs font-semibold uppercase tracking-widest mb-2">{p.category}</p>
-                <h3 className="text-lg font-semibold mb-2 text-[hsl(210,60%,10%)]">{p.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

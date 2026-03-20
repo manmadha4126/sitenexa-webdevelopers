@@ -4,7 +4,7 @@ const CtaSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="py-16 lg:py-20 px-4" ref={ref}>
+    <section className="py-6 lg:py-8 px-4" ref={ref}>
       <div
         className={`container max-w-5xl mx-auto rounded-2xl py-20 px-8 text-center ${
           isVisible ? "animate-fade-up" : "opacity-0"
