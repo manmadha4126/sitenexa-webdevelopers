@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
             Testimonials
           </p>
           <h2
-            className={`font-display text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] ${
+            className={`font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-accent ${
               isVisible ? "animate-fade-up" : "opacity-0"
             }`}
             style={{ animationDelay: "100ms" }}

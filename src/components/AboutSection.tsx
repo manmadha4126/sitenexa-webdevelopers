@@ -22,7 +22,7 @@ const AboutSection = () => {
             About Us
           </p>
           <h2
-            className={`font-display text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] mb-6 ${
+            className={`font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-accent mb-6 ${
               isVisible ? "animate-fade-up" : "opacity-0"
             }`}
             style={{ animationDelay: "100ms" }}
