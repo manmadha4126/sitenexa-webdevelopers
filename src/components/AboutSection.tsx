@@ -10,6 +10,13 @@ const features = [
   { icon: Wrench, title: "Full-Stack Maker", desc: "End-to-end expertise providing a seamless bridge from conceptual design to robust technical launch." },
 ];
 
+const cardStyles = [
+  // 1, 3, 5 — white bg
+  "bg-white border border-[hsl(210,20%,92%)]",
+  // 2, 4, 6 — light blue bg (matching reference)
+  "bg-[hsl(210,50%,95%)] border border-[hsl(210,40%,88%)]",
+];
+
 const AboutSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
@@ -46,7 +53,7 @@ const AboutSection = () => {
           {features.map((f, i) => (
             <div
               key={f.title}
-              className={`group p-8 rounded-2xl bg-[hsl(205,60%,96%)] border border-[hsl(205,50%,90%)] hover:shadow-lg hover:shadow-[hsl(205,80%,50%)]/10 transition-all duration-300 ${
+              className={`group p-8 rounded-2xl ${cardStyles[i % 2]} hover:shadow-lg hover:shadow-[hsl(205,80%,50%)]/10 transition-all duration-300 ${
                 isVisible ? "animate-fade-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${300 + i * 80}ms` }}
