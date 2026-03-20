@@ -25,7 +25,7 @@ const HeroSection = () => {
           >
             <Sparkles size={14} className="text-accent" />
             <span className="text-accent text-xs font-semibold uppercase tracking-[0.15em]">
-              Premium Digital Solutions
+              Next Generation Web Solutions
             </span>
           </div>
 
