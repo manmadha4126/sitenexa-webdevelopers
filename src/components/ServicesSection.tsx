@@ -30,7 +30,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="section-dark py-24 lg:py-32" ref={ref}>
       <div className="container">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-16">
           <span
             className={`inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
               isVisible ? "animate-fade-up" : "opacity-0"
@@ -39,12 +39,12 @@ const ServicesSection = () => {
             What We Do
           </span>
           <h2
-            className={`font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-accent ${
+            className={`font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-accent whitespace-nowrap ${
               isVisible ? "animate-fade-up" : "opacity-0"
             }`}
             style={{ animationDelay: "100ms" }}
           >
-            Services That Drive Growth
+            Services That Accelerate Your Growth
           </h2>
         </div>
 
@@ -52,16 +52,16 @@ const ServicesSection = () => {
           {services.map((s, i) => (
             <div
               key={s.title}
-              className={`group relative p-8 rounded-lg border border-primary-foreground/10 hover:border-accent/40 transition-all duration-300 ${
+              className={`group relative p-8 rounded-lg bg-white/[0.07] border border-white/[0.08] hover:bg-white hover:scale-105 hover:shadow-2xl hover:shadow-[hsl(200,80%,50%)]/15 transition-all duration-300 cursor-pointer ${
                 isVisible ? "animate-fade-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${200 + i * 80}ms` }}
             >
-              <div className="w-14 h-14 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-200">
-                <s.icon size={26} className="text-accent" />
+              <div className="w-14 h-14 rounded-lg bg-accent/10 group-hover:bg-[hsl(200,80%,50%)]/15 flex items-center justify-center mb-6 transition-colors duration-200">
+                <s.icon size={26} className="text-accent group-hover:text-[hsl(200,80%,50%)]" />
               </div>
-              <h3 className="text-lg font-semibold mb-3">{s.title}</h3>
-              <p className="text-dark-muted text-sm leading-relaxed">{s.desc}</p>
+              <h3 className="text-lg font-semibold mb-3 text-white group-hover:text-[hsl(210,60%,15%)] transition-colors duration-200">{s.title}</h3>
+              <p className="text-dark-muted group-hover:text-[hsl(210,10%,45%)] text-sm leading-relaxed transition-colors duration-200">{s.desc}</p>
             </div>
           ))}
         </div>
