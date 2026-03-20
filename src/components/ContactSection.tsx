@@ -21,14 +21,11 @@ const ContactSection = () => {
     <section id="contact" className="section-light py-24 lg:py-32" ref={ref}>
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16">
-          {/* Info */}
-          <div
-            className={`${isVisible ? "animate-slide-left" : "opacity-0"}`}
-          >
+          <div className={`${isVisible ? "animate-slide-left" : "opacity-0"}`}>
             <p className="text-accent text-sm font-semibold uppercase tracking-[0.2em] mb-4">
               Contact Us
             </p>
-            <h2 className="font-display text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] mb-6">
+            <h2 className="font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-accent mb-6">
               Get In Touch
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
@@ -66,7 +63,6 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Form */}
           <form
             onSubmit={handleSubmit}
             className={`space-y-5 ${isVisible ? "animate-slide-right" : "opacity-0"}`}

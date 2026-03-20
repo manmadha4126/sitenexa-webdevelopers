@@ -8,7 +8,7 @@ const CtaSection = () => {
     <section className="section-dark py-24 lg:py-32" ref={ref}>
       <div className="container text-center max-w-3xl mx-auto">
         <h2
-          className={`font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 ${
+          className={`font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6 text-accent ${
             isVisible ? "animate-fade-up" : "opacity-0"
           }`}
         >
