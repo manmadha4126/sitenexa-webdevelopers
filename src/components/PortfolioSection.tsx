@@ -31,8 +31,8 @@ const PortfolioSection = () => {
   return (
     <section id="portfolio" className="section-light py-24 lg:py-32" ref={ref}>
       <div className="container">
-        {/* Project Types heading - left aligned */}
-        <div className="mb-16">
+        {/* Project Types heading - centered */}
+        <div className="mb-16 text-center">
           <span
             className={`inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
               isVisible ? "animate-fade-up" : "opacity-0"
