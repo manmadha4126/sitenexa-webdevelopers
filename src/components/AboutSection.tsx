@@ -11,8 +11,8 @@ const features = [
 ];
 
 const cardStyles = [
-  // 1, 3, 5 — light ashen / coal black
-  "bg-[hsl(0,0%,25%)] border border-[hsl(0,0%,32%)] text-white",
+  // 1, 3, 5 — ash white
+  "bg-[hsl(0,0%,90%)] border border-[hsl(0,0%,82%)] text-[hsl(210,60%,15%)]",
   // 2, 4, 6 — light blue
   "bg-[hsl(210,50%,95%)] border border-[hsl(210,40%,88%)] text-[hsl(210,60%,15%)]",
 ];
