@@ -33,8 +33,8 @@ const HeroSection = () => {
             className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold leading-[0.95] tracking-tight mb-8 opacity-0 animate-fade-up text-white"
             style={{ animationDelay: "400ms" }}
           >
-            Transforming Ideas Into
-            <span className="block text-accent mt-2">Powerful Brands</span>
+            Crafting Digital
+            <span className="block text-accent mt-2">Masterpieces</span>
           </h1>
 
           <p
