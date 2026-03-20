@@ -41,7 +41,7 @@ const HeroSection = () => {
             className="text-[hsl(220,10%,65%)] text-lg sm:text-xl max-w-2xl leading-relaxed mb-12 opacity-0 animate-fade-up"
             style={{ animationDelay: "600ms" }}
           >
-            We are Sitenexa — a creative studio that designs, develops, and delivers digital products engineered to dominate your market and elevate your brand.
+            Sitenexa delivers next-generation web solutions — from stunning interfaces to scalable platforms — built to set your brand apart in a competitive digital landscape.
           </p>
 
           <div
