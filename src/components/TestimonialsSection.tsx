@@ -44,7 +44,7 @@ const TestimonialsSection = () => {
 
   return (
     <section id="testimonials" className="section-light py-12 lg:py-16 overflow-hidden" ref={ref}>
-      <div className="container mb-16">
+      <div className="container mb-8">
         <div className="text-center max-w-2xl mx-auto">
           <span
             className={`inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
