@@ -25,7 +25,7 @@ const HeroSection = () => {
           >
             <Sparkles size={14} className="text-accent" />
             <span className="text-accent text-xs font-semibold uppercase tracking-[0.15em]">
-              Premium Digital Solutions
+              Next Generation Web Solutions
             </span>
           </div>
 
@@ -33,15 +33,15 @@ const HeroSection = () => {
             className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold leading-[0.95] tracking-tight mb-8 opacity-0 animate-fade-up text-white"
             style={{ animationDelay: "400ms" }}
           >
-            Transforming Ideas Into
-            <span className="block text-accent mt-2">Powerful Brands</span>
+            Crafting Digital
+            <span className="block text-accent mt-2">Masterpieces</span>
           </h1>
 
           <p
             className="text-[hsl(220,10%,65%)] text-lg sm:text-xl max-w-2xl leading-relaxed mb-12 opacity-0 animate-fade-up"
             style={{ animationDelay: "600ms" }}
           >
-            We are Sitenexa — a creative studio that designs, develops, and delivers digital products engineered to dominate your market and elevate your brand.
+            Sitenexa delivers next-generation web solutions — from stunning interfaces to scalable platforms — built to set your brand apart in a competitive digital landscape.
           </p>
 
           <div

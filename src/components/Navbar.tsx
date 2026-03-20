@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const links = [
   { label: "About", href: "#about" },
@@ -28,8 +29,9 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <a href="#" className="text-primary-foreground font-display text-2xl font-bold tracking-tight">
-          Sitenexa
+        <a href="#" className="flex items-center gap-3">
+          <img src={logo} alt="Sitenexa" className="h-9 w-9" />
+          <span className="text-primary-foreground font-display text-2xl font-bold tracking-tight">Sitenexa</span>
         </a>
 
         {/* Desktop */}
