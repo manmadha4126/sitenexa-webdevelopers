@@ -28,13 +28,13 @@ const PortfolioSection = () => {
     <section id="portfolio" className="section-light py-24 lg:py-32" ref={ref}>
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p
-            className={`text-accent text-sm font-semibold uppercase tracking-[0.2em] mb-4 ${
+          <span
+            className={`inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
               isVisible ? "animate-fade-up" : "opacity-0"
             }`}
           >
             Our Work
-          </p>
+          </span>
           <h2
             className={`font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-accent ${
               isVisible ? "animate-fade-up" : "opacity-0"

@@ -19,13 +19,13 @@ const WhyChooseUsSection = () => {
 
       <div className="container relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <p
-            className={`text-accent text-sm font-semibold uppercase tracking-[0.2em] mb-4 ${
+          <span
+            className={`inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
               isVisible ? "animate-fade-up" : "opacity-0"
             }`}
           >
             Why Sitenexa
-          </p>
+          </span>
           <h2
             className={`font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-white ${
               isVisible ? "animate-fade-up" : "opacity-0"

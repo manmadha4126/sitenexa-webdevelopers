@@ -22,9 +22,9 @@ const ContactSection = () => {
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16">
           <div className={`${isVisible ? "animate-slide-left" : "opacity-0"}`}>
-            <p className="text-accent text-sm font-semibold uppercase tracking-[0.2em] mb-4">
+            <span className="inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6">
               Contact Us
-            </p>
+            </span>
             <h2 className="font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-accent mb-6">
               Get In Touch
             </h2>

@@ -64,23 +64,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Stats strip */}
-        <div
-          className="mt-24 pt-10 border-t border-white/8 grid grid-cols-2 md:grid-cols-4 gap-10 opacity-0 animate-fade-up"
-          style={{ animationDelay: "1000ms" }}
-        >
-          {[
-            { num: "127+", label: "Projects Delivered" },
-            { num: "98%", label: "Client Retention" },
-            { num: "4.9", label: "Average Rating" },
-            { num: "6+", label: "Years of Experience" },
-          ].map((s) => (
-            <div key={s.label}>
-              <div className="text-4xl font-display font-bold text-accent tabular-nums">{s.num}</div>
-              <div className="text-[hsl(220,10%,50%)] text-sm mt-1.5">{s.label}</div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
