@@ -35,13 +35,12 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="section-light py-24 lg:py-32" ref={ref}>
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p
-            className={`text-accent text-sm font-semibold uppercase tracking-[0.2em] mb-4 ${
-            isVisible ? "animate-fade-up" : "opacity-0"}`
-            }>
-            
+          <span
+            className={`inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
+            isVisible ? "animate-fade-up" : "opacity-0"}`}
+          >
             Testimonials
-          </p>
+          </span>
           <h2
             className={`font-display text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] ${
             isVisible ? "animate-fade-up" : "opacity-0"}`
