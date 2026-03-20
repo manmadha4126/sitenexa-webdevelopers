@@ -1,36 +1,29 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { ArrowRight } from "lucide-react";
 
 const CtaSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="section-dark py-24 lg:py-32" ref={ref}>
-      <div className="container text-center max-w-3xl mx-auto">
-        <h2
-          className={`font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6 text-accent ${
-            isVisible ? "animate-fade-up" : "opacity-0"
-          }`}
-        >
-          Let's Build Something Great Together
+    <section className="py-16 lg:py-20 px-4" ref={ref}>
+      <div
+        className={`container max-w-5xl mx-auto rounded-2xl py-20 px-8 text-center ${
+          isVisible ? "animate-fade-up" : "opacity-0"
+        }`}
+        style={{ background: "hsl(30, 100%, 55%)" }}
+      >
+        <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-10 text-[hsl(220,30%,15%)]">
+          Ready to Elevate Your Digital
+          <br />
+          Presence with High-End Design?
         </h2>
-        <p
-          className={`text-dark-muted text-lg sm:text-xl leading-relaxed mb-10 ${
-            isVisible ? "animate-fade-up" : "opacity-0"
-          }`}
-          style={{ animationDelay: "150ms" }}
-        >
-          Ready to take your digital presence to the next level? Let's talk about your project and bring your vision to life.
-        </p>
         <a
-          href="#contact"
-          className={`inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-md text-base font-semibold tracking-wide hover:opacity-90 transition-opacity active:scale-[0.97] ${
+          href="tel:+918074666415"
+          className={`inline-block bg-white text-[hsl(30,100%,50%)] px-10 py-4 rounded-full text-sm font-bold uppercase tracking-[0.15em] hover:shadow-lg transition-all active:scale-[0.97] ${
             isVisible ? "animate-fade-up" : "opacity-0"
           }`}
-          style={{ animationDelay: "300ms" }}
+          style={{ animationDelay: "200ms" }}
         >
-          Start Your Project
-          <ArrowRight size={18} />
+          Book a Strategy Call
         </a>
       </div>
     </section>
