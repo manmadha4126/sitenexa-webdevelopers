@@ -39,13 +39,13 @@ const ContactSection = () => {
             </p>
 
             <div className="space-y-5">
-              <a href="mailto:sitenexa@gmail.com" className="flex items-center gap-4 group">
+              <a href="mailto:sitenexa21@gmail.com" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-xl bg-[hsl(200,80%,50%)]/15 flex items-center justify-center group-hover:bg-[hsl(200,80%,50%)]/25 transition-colors">
                   <Mail size={20} className="text-[hsl(200,80%,50%)]" />
                 </div>
                 <div>
                   <div className="text-[hsl(210,20%,55%)] text-xs uppercase tracking-wider mb-0.5">Email</div>
-                  <div className="text-white font-medium group-hover:text-[hsl(200,80%,50%)] transition-colors">sitenexa@gmail.com</div>
+                  <div className="text-white font-medium group-hover:text-[hsl(200,80%,50%)] transition-colors">sitenexa21@gmail.com</div>
                 </div>
               </a>
 
