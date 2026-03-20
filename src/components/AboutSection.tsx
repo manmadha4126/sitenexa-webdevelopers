@@ -1,10 +1,13 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Target, Lightbulb, Users } from "lucide-react";
+import { LayoutTemplate, Target, Smartphone, Search, Zap, Wrench } from "lucide-react";
 
-const pillars = [
-  { icon: Lightbulb, title: "Innovation First", desc: "We stay ahead of trends, adopting cutting-edge technologies to deliver future-proof solutions." },
-  { icon: Target, title: "Quality Obsessed", desc: "Every pixel and every line of code is crafted with precision — no shortcuts, no compromises." },
-  { icon: Users, title: "Client-Centric", desc: "Your goals become ours. We collaborate closely to ensure every deliverable exceeds expectations." },
+const features = [
+  { icon: LayoutTemplate, title: "Custom Layouts", desc: "Unique digital architectures coded specifically to communicate your professional brand identity." },
+  { icon: Target, title: "Conversion Focussed", desc: "Strategic UI/UX mapping designed to turn casual site visitors into committed long-term clients." },
+  { icon: Smartphone, title: "Responsive Grid", desc: "Fluid development ensuring your portfolio remains visually stunning across all device dimensions." },
+  { icon: Search, title: "Advanced SEO", desc: "Built-in structural optimization to help your creative work reach its target audience organically." },
+  { icon: Zap, title: "Speed & Motion", desc: "Lightning-fast performance coupled with meaningful interactive animations for a premium user feel." },
+  { icon: Wrench, title: "Full-Stack Maker", desc: "End-to-end expertise providing a seamless bridge from conceptual design to robust technical launch." },
 ];
 
 const AboutSection = () => {
@@ -13,7 +16,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="section-light py-24 lg:py-32" ref={ref}>
       <div className="container">
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-3xl mb-16">
           <span
             className={`inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
               isVisible ? "animate-fade-up" : "opacity-0"
@@ -22,12 +25,12 @@ const AboutSection = () => {
             About Us
           </span>
           <h2
-            className={`font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-accent mb-6 ${
+            className={`font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-[hsl(210,60%,15%)] mb-6 ${
               isVisible ? "animate-fade-up" : "opacity-0"
             }`}
             style={{ animationDelay: "100ms" }}
           >
-            Crafting Digital Excellence Since 2019
+            Tailored Digital Excellence
           </h2>
           <p
             className={`text-muted-foreground text-lg leading-relaxed ${
@@ -35,24 +38,24 @@ const AboutSection = () => {
             }`}
             style={{ animationDelay: "200ms" }}
           >
-            Sitenexa is a digital agency driven by a passion for building impactful digital experiences. We combine design thinking with technical expertise to help businesses thrive in the digital landscape.
+            Sitenexa is a next generation web solutions driven by a passion for building impactful digital experiences. We combine design thinking with technical expertise to help businesses thrive in the digital landscape.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {pillars.map((p, i) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((f, i) => (
             <div
-              key={p.title}
-              className={`group p-8 rounded-lg border border-border bg-secondary/50 hover:shadow-lg hover:shadow-primary/5 transition-shadow duration-300 ${
+              key={f.title}
+              className={`group p-8 rounded-2xl bg-[hsl(205,60%,96%)] border border-[hsl(205,50%,90%)] hover:shadow-lg hover:shadow-[hsl(205,80%,50%)]/10 transition-all duration-300 ${
                 isVisible ? "animate-fade-up" : "opacity-0"
               }`}
-              style={{ animationDelay: `${300 + i * 100}ms` }}
+              style={{ animationDelay: `${300 + i * 80}ms` }}
             >
-              <div className="w-12 h-12 rounded-md bg-primary flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-200">
-                <p.icon size={22} className="text-primary-foreground" />
+              <div className="w-14 h-14 rounded-xl bg-[hsl(205,60%,92%)] flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-200">
+                <f.icon size={26} className="text-[hsl(210,60%,35%)]" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{p.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
+              <h3 className="text-xl font-bold text-[hsl(210,60%,15%)] mb-3">{f.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm">{f.desc}</p>
             </div>
           ))}
         </div>
