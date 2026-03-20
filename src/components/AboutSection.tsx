@@ -11,10 +11,10 @@ const features = [
 ];
 
 const cardStyles = [
-  // 1, 3, 5 — white bg
-  "bg-white border border-[hsl(210,20%,92%)]",
-  // 2, 4, 6 — light blue bg (matching reference)
-  "bg-[hsl(210,50%,95%)] border border-[hsl(210,40%,88%)]",
+  // 1, 3, 5 — light ashen / coal black
+  "bg-[hsl(0,0%,25%)] border border-[hsl(0,0%,32%)] text-white",
+  // 2, 4, 6 — light blue
+  "bg-[hsl(210,50%,95%)] border border-[hsl(210,40%,88%)] text-[hsl(210,60%,15%)]",
 ];
 
 const AboutSection = () => {
@@ -50,21 +50,24 @@ const AboutSection = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((f, i) => (
-            <div
-              key={f.title}
-              className={`group p-8 rounded-2xl ${cardStyles[i % 2]} hover:shadow-lg hover:shadow-[hsl(205,80%,50%)]/10 transition-all duration-300 ${
-                isVisible ? "animate-fade-up" : "opacity-0"
-              }`}
-              style={{ animationDelay: `${300 + i * 80}ms` }}
-            >
-              <div className="w-14 h-14 rounded-xl bg-[hsl(205,60%,92%)] flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-200">
-                <f.icon size={26} className="text-[hsl(210,60%,35%)]" />
+          {features.map((f, i) => {
+            const isDark = i % 2 === 0;
+            return (
+              <div
+                key={f.title}
+                className={`group p-8 rounded-2xl ${cardStyles[i % 2]} hover:scale-105 hover:shadow-xl hover:border-[hsl(200,80%,50%)]/50 transition-all duration-300 ${
+                  isVisible ? "animate-fade-up" : "opacity-0"
+                }`}
+                style={{ animationDelay: `${300 + i * 80}ms` }}
+              >
+                <div className={`w-14 h-14 rounded-xl ${isDark ? "bg-white/15" : "bg-[hsl(205,60%,92%)]"} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-200`}>
+                  <f.icon size={26} className={isDark ? "text-white" : "text-[hsl(210,60%,35%)]"} />
+                </div>
+                <h3 className="text-xl font-bold mb-3">{f.title}</h3>
+                <p className={`leading-relaxed text-sm ${isDark ? "text-white/70" : "text-muted-foreground"}`}>{f.desc}</p>
               </div>
-              <h3 className="text-xl font-bold text-[hsl(210,60%,15%)] mb-3">{f.title}</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">{f.desc}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
