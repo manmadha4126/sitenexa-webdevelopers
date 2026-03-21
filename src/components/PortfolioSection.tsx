@@ -7,7 +7,6 @@ import myProject1 from "@/assets/my-project-1.jpg";
 import myProject2 from "@/assets/my-project-2.jpg";
 import myProject3 from "@/assets/my-project-3.jpg";
 import { ExternalLink } from "lucide-react";
-import { useRef } from "react";
 
 const projects = [
   { img: project1, title: "LuxeCart E-Commerce", category: "Web Development", desc: "Premium online shopping experience." },
@@ -17,16 +16,20 @@ const projects = [
 ];
 
 const myProjects = [
-  { img: myProject1, title: "FinFlow Analytics", category: "SaaS Dashboard", desc: "Enterprise analytics dashboard with real-time data visualization and reporting tools." },
-  { img: myProject2, title: "PayWave Mobile", category: "Fintech App", desc: "Mobile banking application with seamless payments and financial tracking." },
-  { img: myProject3, title: "EduSpark Platform", category: "EdTech Portal", desc: "Online learning platform with interactive courses and student management." },
-  { img: project1, title: "HealthBridge Portal", category: "HealthTech", desc: "Patient management system with telemedicine and appointment scheduling features." },
-  { img: project2, title: "TravelNest Booking", category: "Travel & Hospitality", desc: "Booking platform with dynamic pricing, reviews, and itinerary planning tools." },
+  { img: myProject1, title: "FinFlow Analytics", category: "SaaS Dashboard", desc: "Enterprise analytics dashboard with real-time data visualization." },
+  { img: myProject2, title: "PayWave Mobile", category: "Fintech App", desc: "Mobile banking application with seamless payments." },
+  { img: myProject3, title: "EduSpark Platform", category: "EdTech Portal", desc: "Online learning platform with interactive courses." },
+  { img: project1, title: "HealthBridge Portal", category: "HealthTech", desc: "Patient management system with telemedicine features." },
+  { img: project2, title: "TravelNest Booking", category: "Travel & Hospitality", desc: "Booking platform with dynamic pricing and reviews." },
+  { img: project3, title: "CloudSync CRM", category: "Business Software", desc: "Customer relationship management with AI insights." },
+  { img: project4, title: "GreenMart Store", category: "E-Commerce", desc: "Sustainable shopping platform with eco-friendly products." },
+  { img: myProject1, title: "ArtVault Gallery", category: "Creative Portfolio", desc: "Digital art showcase with immersive 3D viewing." },
+  { img: myProject2, title: "FitPulse Tracker", category: "Health & Wellness", desc: "Fitness tracking app with personalized workout plans." },
+  { img: myProject3, title: "CodeNest IDE", category: "Developer Tools", desc: "Cloud-based code editor with real-time collaboration." },
 ];
 
 const PortfolioSection = () => {
   const { ref, isVisible } = useScrollReveal();
-  const scrollRef = useRef<HTMLDivElement>(null);
 
   return (
     <section id="portfolio" className="section-light py-24 lg:py-32" ref={ref}>
@@ -48,6 +51,14 @@ const PortfolioSection = () => {
           >
             Project Types
           </h2>
+          <p
+            className={`mt-4 text-[hsl(210,10%,45%)] text-base max-w-2xl mx-auto leading-relaxed ${
+              isVisible ? "animate-fade-up" : "opacity-0"
+            }`}
+            style={{ animationDelay: "200ms" }}
+          >
+            We built a smart solution. Check out our portfolio and understand our skills, creativity and approach.
+          </p>
         </div>
 
         {/* 4 cards in one horizontal line */}
@@ -80,7 +91,7 @@ const PortfolioSection = () => {
           ))}
         </div>
 
-        {/* My Projects heading - left aligned */}
+        {/* My Projects heading */}
         <div className="mt-24 mb-10">
           <h2
             className={`font-display text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] text-[hsl(210,60%,10%)] ${
@@ -92,18 +103,15 @@ const PortfolioSection = () => {
           </h2>
         </div>
 
-        {/* Auto-scrolling project cards */}
+        {/* Fast auto-scrolling project cards - continuous */}
         <div className="overflow-hidden">
-          <div className="flex gap-6 animate-scroll-left">
+          <div className="flex gap-6 animate-scroll-left-fast">
             {[...myProjects, ...myProjects].map((p, i) => (
               <div
                 key={`mp-${i}`}
-                className={`group relative overflow-hidden rounded-xl cursor-pointer border border-border hover:shadow-xl hover:shadow-primary/5 transition-shadow duration-300 flex-shrink-0 w-[340px] ${
-                  isVisible ? "animate-fade-up" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${700 + (i % myProjects.length) * 100}ms` }}
+                className="group relative overflow-hidden rounded-xl cursor-pointer border border-border hover:shadow-xl hover:shadow-primary/5 transition-shadow duration-300 flex-shrink-0 w-[300px]"
               >
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-[16/10] overflow-hidden">
                   <img
                     src={p.img}
                     alt={p.title}
@@ -111,10 +119,10 @@ const PortfolioSection = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="p-6">
-                  <p className="text-accent text-xs font-semibold uppercase tracking-widest mb-2">{p.category}</p>
-                  <h3 className="text-lg font-semibold mb-2 text-[hsl(210,60%,10%)]">{p.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
+                <div className="p-4">
+                  <p className="text-accent text-xs font-semibold uppercase tracking-widest mb-1">{p.category}</p>
+                  <h3 className="text-base font-semibold mb-1 text-[hsl(210,60%,10%)]">{p.title}</h3>
+                  <p className="text-muted-foreground text-xs leading-relaxed">{p.desc}</p>
                 </div>
               </div>
             ))}
