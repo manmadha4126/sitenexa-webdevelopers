@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Mail, Phone, Send, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, Send, MapPin, ArrowRight, Globe } from "lucide-react";
 import { useState, FormEvent } from "react";
 import { toast } from "sonner";
 
@@ -18,113 +18,136 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="relative py-24 lg:py-32 bg-[hsl(210,60%,15%)] overflow-hidden" ref={ref}>
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[hsl(200,80%,50%)]/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[hsl(260,60%,40%)]/8 blur-[100px] pointer-events-none" />
+    <section id="contact" className="relative overflow-hidden" ref={ref}>
+      {/* Top dark section with heading + social icons */}
+      <div className="bg-[hsl(240,20%,12%)] pt-20 pb-32 lg:pb-40 relative">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[hsl(260,60%,50%)]/5 blur-[120px] pointer-events-none" />
+        <div className="container relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left: heading + social */}
+            <div className={`${isVisible ? "animate-fade-up" : "opacity-0"}`}>
+              <span className="inline-block bg-[hsl(260,70%,55%)] text-white text-sm font-bold uppercase tracking-[0.15em] px-5 py-2 rounded-md mb-6">
+                Contact Us
+              </span>
+              <h2 className="font-display text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] text-white mb-8">
+                Connect with Us for<br />
+                the Best & Perfect <span className="text-[hsl(260,70%,65%)]">Solutions</span>
+              </h2>
 
-      <div className="container relative z-10">
-        <div className="grid lg:grid-cols-5 gap-12 items-start">
-          {/* Left info - 2 cols */}
-          <div className={`lg:col-span-2 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
-            <span className="inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6">
-              Contact Us
-            </span>
-            <h2 className="font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-white mb-6">
-              Let's Start a<br />
-              <span className="text-[hsl(200,80%,50%)]">Conversation</span>
-            </h2>
-            <p className="text-[hsl(210,20%,65%)] text-lg leading-relaxed mb-10">
-              Ready to transform your digital presence? Drop us a line and we'll get back to you within 24 hours.
-            </p>
+              {/* Social icons row */}
+              <div className="flex gap-4">
+                {[
+                  { icon: "📷", bg: "bg-gradient-to-br from-[hsl(330,80%,55%)] to-[hsl(30,90%,55%)]", href: "#" },
+                  { icon: "📍", bg: "bg-[hsl(130,60%,45%)]", href: "#" },
+                  { icon: "💬", bg: "bg-[hsl(140,70%,45%)]", href: "https://wa.me/918074666415" },
+                  { icon: "📞", bg: "bg-[hsl(210,80%,55%)]", href: "tel:+918074666415" },
+                ].map((s, i) => (
+                  <a
+                    key={i}
+                    href={s.href}
+                    className={`w-12 h-12 ${s.bg} rounded-full flex items-center justify-center text-white text-lg hover:scale-110 transition-transform`}
+                  >
+                    {s.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
 
-            <div className="space-y-5">
-              <a href="mailto:sitenexa21@gmail.com" className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-xl bg-[hsl(200,80%,50%)]/15 flex items-center justify-center group-hover:bg-[hsl(200,80%,50%)]/25 transition-colors">
-                  <Mail size={20} className="text-[hsl(200,80%,50%)]" />
+            {/* Right: Form card (overlaps into bottom section) */}
+            <div
+              className={`relative z-20 bg-white rounded-2xl shadow-2xl p-8 lg:p-10 ${
+                isVisible ? "animate-fade-up" : "opacity-0"
+              }`}
+              style={{ animationDelay: "150ms" }}
+            >
+              <h3 className="text-[hsl(260,70%,55%)] text-xl font-bold text-center mb-1">Schedule a Free Consultation</h3>
+              <p className="text-center text-2xl mb-6">🤝</p>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label className="text-[hsl(260,70%,55%)] text-sm font-semibold mb-1.5 block">Full Name</label>
+                  <input
+                    name="name"
+                    type="text"
+                    required
+                    className="w-full rounded-lg bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-4 py-3 text-sm text-[hsl(240,20%,15%)] placeholder:text-[hsl(230,10%,60%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all"
+                    placeholder="Your Name"
+                  />
                 </div>
                 <div>
-                  <div className="text-[hsl(210,20%,55%)] text-xs uppercase tracking-wider mb-0.5">Email</div>
-                  <div className="text-white font-medium group-hover:text-[hsl(200,80%,50%)] transition-colors">sitenexa21@gmail.com</div>
-                </div>
-              </a>
-
-              <a href="tel:+918074666415" className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-xl bg-[hsl(200,80%,50%)]/15 flex items-center justify-center group-hover:bg-[hsl(200,80%,50%)]/25 transition-colors">
-                  <Phone size={20} className="text-[hsl(200,80%,50%)]" />
-                </div>
-                <div>
-                  <div className="text-[hsl(210,20%,55%)] text-xs uppercase tracking-wider mb-0.5">Phone</div>
-                  <div className="text-white font-medium group-hover:text-[hsl(200,80%,50%)] transition-colors">+91 8074666415</div>
-                  <div className="text-white/60 text-sm">+91 9676133441</div>
-                </div>
-              </a>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[hsl(200,80%,50%)]/15 flex items-center justify-center">
-                  <MapPin size={20} className="text-[hsl(200,80%,50%)]" />
+                  <label className="text-[hsl(260,70%,55%)] text-sm font-semibold mb-1.5 block">Email*</label>
+                  <input
+                    name="email"
+                    type="email"
+                    required
+                    className="w-full rounded-lg bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-4 py-3 text-sm text-[hsl(240,20%,15%)] placeholder:text-[hsl(230,10%,60%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all"
+                    placeholder="you@example.com"
+                  />
                 </div>
                 <div>
-                  <div className="text-[hsl(210,20%,55%)] text-xs uppercase tracking-wider mb-0.5">Contact Person</div>
-                  <div className="text-white font-semibold text-lg">Manmadha</div>
+                  <label className="text-[hsl(260,70%,55%)] text-sm font-semibold mb-1.5 block">Phone Number</label>
+                  <input
+                    name="phone"
+                    type="tel"
+                    className="w-full rounded-lg bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-4 py-3 text-sm text-[hsl(240,20%,15%)] placeholder:text-[hsl(230,10%,60%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all"
+                    placeholder="Your Phone"
+                  />
                 </div>
+                <div>
+                  <label className="text-[hsl(260,70%,55%)] text-sm font-semibold mb-1.5 block">Message</label>
+                  <textarea
+                    name="message"
+                    required
+                    rows={4}
+                    className="w-full rounded-lg bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-4 py-3 text-sm text-[hsl(240,20%,15%)] placeholder:text-[hsl(230,10%,60%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all resize-none"
+                    placeholder="Tell us about your project…"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={sending}
+                  className="bg-[hsl(260,70%,55%)] text-white px-8 py-3 rounded-lg text-sm font-semibold tracking-wide hover:bg-[hsl(260,70%,48%)] transition-colors active:scale-[0.97] disabled:opacity-60"
+                >
+                  {sending ? "Sending…" : "Submit"}
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom light section with contact details */}
+      <div className="bg-[hsl(230,30%,96%)] pt-16 pb-20">
+        <div className="container">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="flex items-start gap-4">
+              <Phone size={22} className="text-[hsl(260,70%,55%)] mt-1 shrink-0" />
+              <div>
+                <h4 className="font-bold text-[hsl(240,20%,15%)] mb-1">Call us at:</h4>
+                <p className="text-[hsl(230,10%,40%)] text-sm">8074666415 | 9676133441</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Mail size={22} className="text-[hsl(260,70%,55%)] mt-1 shrink-0" />
+              <div>
+                <h4 className="font-bold text-[hsl(240,20%,15%)] mb-1">Email:</h4>
+                <p className="text-[hsl(230,10%,40%)] text-sm">sitenexa21@gmail.com</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Globe size={22} className="text-[hsl(260,70%,55%)] mt-1 shrink-0" />
+              <div>
+                <h4 className="font-bold text-[hsl(240,20%,15%)] mb-1">Website:</h4>
+                <p className="text-[hsl(230,10%,40%)] text-sm">www.sitenexa.in</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <MapPin size={22} className="text-[hsl(260,70%,55%)] mt-1 shrink-0" />
+              <div>
+                <h4 className="font-bold text-[hsl(240,20%,15%)] mb-1">Contact Person:</h4>
+                <p className="text-[hsl(230,10%,40%)] text-sm font-semibold">Manmadha</p>
               </div>
             </div>
           </div>
-
-          {/* Right form - 3 cols */}
-          <form
-            onSubmit={handleSubmit}
-            className={`lg:col-span-3 bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] rounded-2xl p-8 lg:p-10 ${
-              isVisible ? "animate-fade-up" : "opacity-0"
-            }`}
-            style={{ animationDelay: "150ms" }}
-          >
-            <h3 className="text-white text-2xl font-bold mb-8">Send Us a Message</h3>
-            <div className="grid sm:grid-cols-2 gap-5 mb-5">
-              <div>
-                <label htmlFor="name" className="text-[hsl(210,20%,65%)] text-sm font-medium mb-2 block">Your Name</label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  className="w-full rounded-xl bg-white/[0.06] border border-white/[0.1] px-4 py-3.5 text-sm text-white placeholder:text-white/30 outline-none focus:border-[hsl(200,80%,50%)] focus:ring-1 focus:ring-[hsl(200,80%,50%)]/30 transition-all"
-                  placeholder="John Doe"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="text-[hsl(210,20%,65%)] text-sm font-medium mb-2 block">Your Email</label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  className="w-full rounded-xl bg-white/[0.06] border border-white/[0.1] px-4 py-3.5 text-sm text-white placeholder:text-white/30 outline-none focus:border-[hsl(200,80%,50%)] focus:ring-1 focus:ring-[hsl(200,80%,50%)]/30 transition-all"
-                  placeholder="you@example.com"
-                />
-              </div>
-            </div>
-            <div className="mb-6">
-              <label htmlFor="message" className="text-[hsl(210,20%,65%)] text-sm font-medium mb-2 block">Your Message</label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows={5}
-                className="w-full rounded-xl bg-white/[0.06] border border-white/[0.1] px-4 py-3.5 text-sm text-white placeholder:text-white/30 outline-none focus:border-[hsl(200,80%,50%)] focus:ring-1 focus:ring-[hsl(200,80%,50%)]/30 transition-all resize-none"
-                placeholder="Tell us about your project…"
-              />
-            </div>
-            <button
-              type="submit"
-              disabled={sending}
-              className="inline-flex items-center gap-2 bg-[hsl(200,80%,50%)] text-white px-8 py-4 rounded-xl text-sm font-semibold tracking-wide hover:bg-[hsl(200,80%,45%)] transition-colors active:scale-[0.97] disabled:opacity-60"
-            >
-              {sending ? "Sending…" : "Send Message"}
-              <ArrowRight size={16} />
-            </button>
-          </form>
         </div>
       </div>
     </section>

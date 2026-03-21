@@ -109,6 +109,7 @@ export default {
         "slide-left": "slide-left 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "slide-right": "slide-right 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "scroll-left": "scroll-left 30s linear infinite",
+        "scroll-left-fast": "scroll-left 15s linear infinite",
         "scroll-right": "scroll-right 30s linear infinite",
       },
     },

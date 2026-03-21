@@ -28,18 +28,18 @@ const ServicesSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="services" className="section-dark py-24 lg:py-32" ref={ref}>
+    <section id="services" className="py-24 lg:py-32 bg-[hsl(192,70%,28%)]" ref={ref}>
       <div className="container">
         <div className="text-center max-w-4xl mx-auto mb-16">
           <span
-            className={`inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
+            className={`inline-block bg-white/20 text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
               isVisible ? "animate-fade-up" : "opacity-0"
             }`}
           >
             What We Do
           </span>
           <h2
-            className={`font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-accent whitespace-nowrap ${
+            className={`font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-white whitespace-nowrap ${
               isVisible ? "animate-fade-up" : "opacity-0"
             }`}
             style={{ animationDelay: "100ms" }}
@@ -52,13 +52,13 @@ const ServicesSection = () => {
           {services.map((s, i) => (
             <div
               key={s.title}
-              className={`group relative p-8 rounded-lg bg-white border border-[hsl(210,20%,90%)] hover:scale-105 hover:shadow-2xl hover:shadow-[hsl(200,80%,50%)]/15 transition-all duration-300 cursor-pointer ${
+              className={`group relative p-8 rounded-lg bg-white border border-[hsl(210,20%,90%)] hover:scale-105 hover:shadow-2xl hover:shadow-white/15 transition-all duration-300 cursor-pointer ${
                 isVisible ? "animate-fade-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${200 + i * 80}ms` }}
             >
-              <div className="w-14 h-14 rounded-lg bg-[hsl(205,60%,92%)] group-hover:bg-[hsl(200,80%,50%)]/15 flex items-center justify-center mb-6 transition-colors duration-200">
-                <s.icon size={26} className="text-[hsl(210,60%,35%)] group-hover:text-[hsl(200,80%,50%)]" />
+              <div className="w-14 h-14 rounded-lg bg-[hsl(192,70%,90%)] group-hover:bg-[hsl(192,70%,28%)]/15 flex items-center justify-center mb-6 transition-colors duration-200">
+                <s.icon size={26} className="text-[hsl(192,70%,28%)] group-hover:text-[hsl(192,70%,35%)]" />
               </div>
               <h3 className="text-lg font-semibold mb-3 text-[hsl(210,60%,15%)] transition-colors duration-200">{s.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed transition-colors duration-200">{s.desc}</p>
