@@ -76,7 +76,7 @@ const ServicesSection = () => {
               key={`svc-${i}`}
               className="group relative p-8 bg-white border-[hsl(210,20%,90%)] hover:scale-105 hover:shadow-white/15 transition-all duration-300 cursor-pointer flex-shrink-0 w-[280px] border-2 border-solid rounded-xl shadow-inner">
               
-                <div className="w-14 h-14 rounded-lg bg-[hsl(30,95%,92%)] group-hover:bg-[hsl(30,95%,85%)] flex items-center justify-center mb-6 transition-colors duration-200">
+                <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-6 transition-colors duration-200 bg-yellow-300">
                   <s.icon size={26} className="text-[hsl(30,95%,50%)]" />
                 </div>
                 <h3 className="text-lg font-semibold mb-3 text-[hsl(210,60%,15%)] transition-colors duration-200">{s.title}</h3>
