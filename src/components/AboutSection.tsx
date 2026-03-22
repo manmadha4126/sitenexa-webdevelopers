@@ -61,7 +61,7 @@ const AboutSection = () => {
                   <f.icon size={26} className="text-[hsl(210,60%,35%)]" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{f.title}</h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">{f.desc}</p>
+                <p className="leading-relaxed text-base text-sidebar-foreground">{f.desc}</p>
               </div>);
 
           })}
