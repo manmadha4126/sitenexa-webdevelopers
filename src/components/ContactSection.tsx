@@ -23,11 +23,11 @@ const ContactSection = () => {
         {/* Single unified block with white border */}
         <div
           className={`relative rounded-2xl overflow-hidden border-4 border-white shadow-2xl ${
-            isVisible ? "animate-fade-up" : "opacity-0"
-          }`}
-        >
+          isVisible ? "animate-fade-up" : "opacity-0"}`
+          }>
+          
           {/* Top dark section */}
-          <div className="bg-[hsl(240,22%,13%)] px-8 lg:px-14 pt-8 pb-16 lg:pb-20">
+          <div className="bg-[hsl(240,22%,13%)] px-8 pt-8 pb-16 lg:pb-20 lg:px-[50px] mx-0 my-0 py-0">
             <div className="grid lg:grid-cols-2 gap-8 items-start">
               {/* LEFT: heading + social */}
               <div>
@@ -35,8 +35,8 @@ const ContactSection = () => {
                   Contact Us
                 </span>
                 <h2
-                  className="font-display text-[2rem] lg:text-[2.4rem] font-bold tracking-tight leading-[1.12] text-white mb-6"
-                >
+                  className="font-display text-[2rem] lg:text-[2.4rem] font-bold tracking-tight leading-[1.12] text-white mb-6">
+                  
                   Connect with Us for
                   the Best & Perfect{" "}
                   <span className="text-[hsl(30,85%,65%)]">Web Solutions</span>
@@ -64,7 +64,7 @@ const ContactSection = () => {
               </div>
 
               {/* RIGHT: Form card - half in dark, half in light */}
-              <div className="bg-white rounded-xl shadow-2xl shadow-black/10 p-6 lg:p-7 relative z-20 lg:mb-[-80px] max-w-md lg:ml-auto">
+              <div className="bg-white rounded-xl shadow-2xl shadow-black/10 p-6 lg:p-7 relative z-20 lg:mb-[-80px] max-w-md lg:ml-auto px-[80px] py-0">
                 <h3 className="text-[hsl(260,65%,45%)] text-base font-bold text-center mb-0.5">Schedule a Free Consultation</h3>
                 <p className="text-center text-lg mb-3">🤝</p>
                 <hr className="border-[hsl(230,20%,88%)] mb-4" />
@@ -73,34 +73,34 @@ const ContactSection = () => {
                     <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Full Name</label>
                     <input
                       name="name" type="text" required maxLength={100}
-                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all"
-                    />
+                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all" />
+                    
                   </div>
                   <div>
                     <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Email*</label>
                     <input
                       name="email" type="email" required maxLength={255}
-                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all"
-                    />
+                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all" />
+                    
                   </div>
                   <div>
                     <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Phone Number</label>
                     <input
                       name="phone" type="tel" maxLength={15}
-                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all"
-                    />
+                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all" />
+                    
                   </div>
                   <div>
                     <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Message</label>
                     <textarea
                       name="message" required maxLength={1000} rows={2}
-                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all resize-none"
-                    />
+                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all resize-none" />
+                    
                   </div>
                   <button
                     type="submit" disabled={sending}
-                    className="bg-[hsl(260,65%,48%)] text-white px-6 py-2 rounded-md text-sm font-semibold tracking-wide hover:bg-[hsl(260,65%,42%)] transition-colors active:scale-[0.97] disabled:opacity-60"
-                  >
+                    className="bg-[hsl(260,65%,48%)] text-white px-6 py-2 rounded-md text-sm font-semibold tracking-wide hover:bg-[hsl(260,65%,42%)] transition-colors active:scale-[0.97] disabled:opacity-60">
+                    
                     {sending ? "Sending…" : "Submit"}
                   </button>
                 </form>
@@ -109,7 +109,7 @@ const ContactSection = () => {
           </div>
 
           {/* Bottom light section - contact details */}
-          <div className="bg-[hsl(230,25%,94%)] px-8 lg:px-14 pt-10 lg:pt-14 pb-8">
+          <div className="bg-[hsl(230,25%,94%)] px-8 lg:px-14 pt-10 lg:pt-14 pb-8 my-0 py-[90px]">
             <div className="max-w-2xl space-y-4">
               <div className="flex items-start gap-4">
                 <Phone size={18} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
@@ -143,8 +143,8 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default ContactSection;
