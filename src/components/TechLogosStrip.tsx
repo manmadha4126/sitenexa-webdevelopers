@@ -28,7 +28,7 @@ const TechLogosStrip = () => {
   return (
     <section className="bg-white py-10 overflow-hidden">
       <div className="relative">
-        <div className="flex animate-scroll-left-slow w-max gap-20">
+        <div className="flex animate-scroll-left w-max gap-20">
           {doubled.map((t, i) => (
             <div key={i} className="flex flex-col items-center gap-3 min-w-[140px]">
               <div className="text-[hsl(220,20%,18%)]">{t.icon}</div>
