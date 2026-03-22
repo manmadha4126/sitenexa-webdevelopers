@@ -11,9 +11,7 @@ const features = [
 ];
 
 const cardStyles = [
-  // 1, 3, 5 — ash white
   "bg-[hsl(0,0%,90%)] border border-[hsl(0,0%,82%)] text-[hsl(210,60%,15%)]",
-  // 2, 4, 6 — light blue
   "bg-[hsl(210,50%,95%)] border border-[hsl(210,40%,88%)] text-[hsl(210,60%,15%)]",
 ];
 
@@ -54,7 +52,7 @@ const AboutSection = () => {
             return (
               <div
                 key={f.title}
-                className={`group p-8 rounded-2xl ${cardStyles[i % 2]} hover:scale-105 hover:shadow-xl hover:border-[hsl(200,80%,50%)]/50 transition-all duration-300 ${
+                className={`group p-8 rounded-2xl ${cardStyles[i % 2]} hover:scale-110 hover:shadow-2xl hover:border-[hsl(200,80%,50%)] hover:shadow-[hsl(200,80%,50%)]/20 transition-all duration-300 cursor-pointer ${
                   isVisible ? "animate-fade-up" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${300 + i * 80}ms` }}

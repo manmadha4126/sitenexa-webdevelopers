@@ -6,12 +6,12 @@ import project4 from "@/assets/project-4.jpg";
 import myProject1 from "@/assets/my-project-1.jpg";
 import myProject2 from "@/assets/my-project-2.jpg";
 import myProject3 from "@/assets/my-project-3.jpg";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Phone } from "lucide-react";
 
 const projects = [
   { img: project1, title: "LuxeCart E-Commerce", category: "Web Development", desc: "Premium online shopping experience." },
   { img: project2, title: "DataPulse Dashboard", category: "Software Solution", desc: "Real-time analytics platform." },
-  { img: project3, title: "VitalTrack App", category: "Mobile App Design", desc: "Health & fitness tracking app." },
+  { img: myProject1, title: "VitalTrack App", category: "Mobile App Design", desc: "Health & fitness tracking app." },
   { img: project4, title: "Savora Restaurant", category: "Website Design", desc: "Fine dining digital presence." },
 ];
 
@@ -21,11 +21,11 @@ const myProjects = [
   { img: myProject3, title: "EduSpark Platform", category: "EdTech Portal", desc: "Online learning platform with interactive courses." },
   { img: project1, title: "HealthBridge Portal", category: "HealthTech", desc: "Patient management system with telemedicine features." },
   { img: project2, title: "TravelNest Booking", category: "Travel & Hospitality", desc: "Booking platform with dynamic pricing and reviews." },
-  { img: project3, title: "CloudSync CRM", category: "Business Software", desc: "Customer relationship management with AI insights." },
-  { img: project4, title: "GreenMart Store", category: "E-Commerce", desc: "Sustainable shopping platform with eco-friendly products." },
-  { img: myProject1, title: "ArtVault Gallery", category: "Creative Portfolio", desc: "Digital art showcase with immersive 3D viewing." },
-  { img: myProject2, title: "FitPulse Tracker", category: "Health & Wellness", desc: "Fitness tracking app with personalized workout plans." },
-  { img: myProject3, title: "CodeNest IDE", category: "Developer Tools", desc: "Cloud-based code editor with real-time collaboration." },
+  { img: project4, title: "CloudSync CRM", category: "Business Software", desc: "Customer relationship management with AI insights." },
+  { img: myProject1, title: "GreenMart Store", category: "E-Commerce", desc: "Sustainable shopping platform with eco-friendly products." },
+  { img: myProject2, title: "ArtVault Gallery", category: "Creative Portfolio", desc: "Digital art showcase with immersive 3D viewing." },
+  { img: myProject3, title: "FitPulse Tracker", category: "Health & Wellness", desc: "Fitness tracking app with personalized workout plans." },
+  { img: project1, title: "CodeNest IDE", category: "Developer Tools", desc: "Cloud-based code editor with real-time collaboration." },
 ];
 
 const PortfolioSection = () => {
@@ -61,17 +61,17 @@ const PortfolioSection = () => {
           </p>
         </div>
 
-        {/* 4 cards in one horizontal line */}
+        {/* 4 cards - decreased height, borders, data visible */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           {projects.map((p, i) => (
             <div
               key={p.title}
-              className={`group relative overflow-hidden rounded-lg cursor-pointer ${
+              className={`group relative overflow-hidden rounded-lg cursor-pointer border-2 border-[hsl(210,20%,85%)] hover:border-[hsl(200,80%,50%)] transition-all duration-300 ${
                 isVisible ? "animate-fade-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${200 + i * 80}ms` }}
             >
-              <div className="aspect-[3/4] overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={p.img}
                   alt={p.title}
@@ -79,16 +79,33 @@ const PortfolioSection = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0,0%,6%)] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-                <div>
-                  <p className="text-accent text-xs uppercase tracking-widest mb-1">{p.category}</p>
-                  <h3 className="text-primary-foreground text-base font-semibold mb-0.5">{p.title}</h3>
-                  <p className="text-primary-foreground/60 text-xs">{p.desc}</p>
-                </div>
-                <ExternalLink size={16} className="text-primary-foreground/60 ml-auto self-end shrink-0" />
+              <div className="p-4 bg-white">
+                <p className="text-accent text-xs uppercase tracking-widest mb-1 font-semibold">{p.category}</p>
+                <h3 className="text-[hsl(210,60%,10%)] text-base font-semibold mb-0.5">{p.title}</h3>
+                <p className="text-muted-foreground text-xs">{p.desc}</p>
+              </div>
+              <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <ExternalLink size={16} className="text-white drop-shadow-lg" />
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA buttons after project types */}
+        <div className={`flex flex-wrap justify-center gap-5 mt-10 ${isVisible ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: "500ms" }}>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 bg-[hsl(200,80%,50%)] text-white px-8 py-3.5 rounded-full text-sm font-bold tracking-wide hover:shadow-xl hover:scale-105 transition-all duration-300"
+          >
+            Let's Connect With Us
+          </a>
+          <a
+            href="tel:+918074666415"
+            className="inline-flex items-center gap-2 bg-[hsl(30,95%,55%)] text-white px-8 py-3.5 rounded-full text-sm font-bold tracking-wide hover:shadow-xl hover:scale-105 transition-all duration-300"
+          >
+            <Phone size={16} />
+            Book a Call
+          </a>
         </div>
 
         {/* My Projects heading */}

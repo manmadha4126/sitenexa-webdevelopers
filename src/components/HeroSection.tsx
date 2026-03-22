@@ -1,4 +1,4 @@
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-office-bg.jpg";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 const HeroSection = () => {
