@@ -18,7 +18,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-white" ref={ref}>
+    <section id="contact" className="py-10 lg:py-14 bg-white" ref={ref}>
       <div className="container">
         {/* Single unified block with white border */}
         <div
@@ -27,80 +27,79 @@ const ContactSection = () => {
           }`}
         >
           {/* Top dark section */}
-          <div className="bg-[hsl(240,22%,13%)] px-8 lg:px-14 pt-10 pb-20 lg:pb-24">
+          <div className="bg-[hsl(240,22%,13%)] px-8 lg:px-14 pt-8 pb-16 lg:pb-20">
             <div className="grid lg:grid-cols-2 gap-8 items-start">
               {/* LEFT: heading + social */}
               <div>
-                <span className="inline-block bg-[hsl(260,65%,52%)] text-white text-[11px] font-bold uppercase tracking-[0.2em] px-5 py-2 rounded mb-6">
+                <span className="inline-block bg-[hsl(260,65%,52%)] text-white text-[11px] font-bold uppercase tracking-[0.2em] px-5 py-2 rounded mb-5">
                   Contact Us
                 </span>
                 <h2
-                  className="font-display text-[2.4rem] lg:text-[2.8rem] font-bold tracking-tight leading-[1.12] text-white mb-8"
-                  style={{ fontStyle: "italic" }}
+                  className="font-display text-[2rem] lg:text-[2.4rem] font-bold tracking-tight leading-[1.12] text-white mb-6"
                 >
-                  Connect with Us for<br />
+                  Connect with Us for
                   the Best & Perfect{" "}
-                  <span className="text-[hsl(30,85%,65%)]">Matches</span>
+                  <span className="text-[hsl(30,85%,65%)]">Web Solutions</span>
                 </h2>
 
                 {/* Social icons */}
                 <div className="flex gap-3.5">
-                  <a href="#" className="w-[52px] h-[52px] rounded-full bg-gradient-to-tr from-[hsl(37,95%,55%)] via-[hsl(330,75%,55%)] to-[hsl(270,70%,55%)] flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <a href="#" className="w-[48px] h-[48px] rounded-full bg-gradient-to-tr from-[hsl(37,95%,55%)] via-[hsl(330,75%,55%)] to-[hsl(270,70%,55%)] flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                     </svg>
                   </a>
-                  <a href="#" className="w-[52px] h-[52px] rounded-full bg-[hsl(145,60%,42%)] flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
-                    <MapPin size={22} />
+                  <a href="#" className="w-[48px] h-[48px] rounded-full bg-[hsl(145,60%,42%)] flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
+                    <MapPin size={20} />
                   </a>
-                  <a href="https://wa.me/918074666415" target="_blank" rel="noopener noreferrer" className="w-[52px] h-[52px] rounded-full bg-[hsl(135,70%,40%)] flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <a href="https://wa.me/918074666415" target="_blank" rel="noopener noreferrer" className="w-[48px] h-[48px] rounded-full bg-[hsl(135,70%,40%)] flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                     </svg>
                   </a>
-                  <a href="tel:+918074666415" className="w-[52px] h-[52px] rounded-full bg-[hsl(215,75%,52%)] flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
-                    <Phone size={22} />
+                  <a href="tel:+918074666415" className="w-[48px] h-[48px] rounded-full bg-[hsl(215,75%,52%)] flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
+                    <Phone size={20} />
                   </a>
                 </div>
               </div>
 
-              {/* RIGHT: Form card - overlapping dark and light */}
-              <div className="bg-white rounded-2xl shadow-2xl shadow-black/10 p-8 lg:p-9 relative z-20 lg:mt-0 lg:mb-[-100px]">
-                <h3 className="text-[hsl(260,65%,45%)] text-lg font-bold text-center mb-0.5">Schedule a Free Consultation</h3>
-                <p className="text-center text-xl mb-4">🤝</p>
-                <hr className="border-[hsl(230,20%,88%)] mb-5" />
-                <form onSubmit={handleSubmit} className="space-y-4">
+              {/* RIGHT: Form card - half in dark, half in light */}
+              <div className="bg-white rounded-xl shadow-2xl shadow-black/10 p-6 lg:p-7 relative z-20 lg:mb-[-80px] max-w-md lg:ml-auto">
+                <h3 className="text-[hsl(260,65%,45%)] text-base font-bold text-center mb-0.5">Schedule a Free Consultation</h3>
+                <p className="text-center text-lg mb-3">🤝</p>
+                <hr className="border-[hsl(230,20%,88%)] mb-4" />
+                <form onSubmit={handleSubmit} className="space-y-3">
                   <div>
-                    <label className="text-[hsl(200,70%,35%)] text-sm font-semibold mb-1 block">Full Name</label>
+                    <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Full Name</label>
                     <input
                       name="name" type="text" required maxLength={100}
-                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-4 py-2.5 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all"
+                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all"
                     />
                   </div>
                   <div>
-                    <label className="text-[hsl(200,70%,35%)] text-sm font-semibold mb-1 block">Email*</label>
+                    <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Email*</label>
                     <input
                       name="email" type="email" required maxLength={255}
-                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-4 py-2.5 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all"
+                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all"
                     />
                   </div>
                   <div>
-                    <label className="text-[hsl(200,70%,35%)] text-sm font-semibold mb-1 block">Phone Number</label>
+                    <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Phone Number</label>
                     <input
                       name="phone" type="tel" maxLength={15}
-                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-4 py-2.5 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all"
+                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all"
                     />
                   </div>
                   <div>
-                    <label className="text-[hsl(200,70%,35%)] text-sm font-semibold mb-1 block">Message</label>
+                    <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Message</label>
                     <textarea
-                      name="message" required maxLength={1000} rows={3}
-                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-4 py-2.5 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all resize-none"
+                      name="message" required maxLength={1000} rows={2}
+                      className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all resize-none"
                     />
                   </div>
                   <button
                     type="submit" disabled={sending}
-                    className="bg-[hsl(260,65%,48%)] text-white px-7 py-2.5 rounded-md text-sm font-semibold tracking-wide hover:bg-[hsl(260,65%,42%)] transition-colors active:scale-[0.97] disabled:opacity-60"
+                    className="bg-[hsl(260,65%,48%)] text-white px-6 py-2 rounded-md text-sm font-semibold tracking-wide hover:bg-[hsl(260,65%,42%)] transition-colors active:scale-[0.97] disabled:opacity-60"
                   >
                     {sending ? "Sending…" : "Submit"}
                   </button>
@@ -110,33 +109,33 @@ const ContactSection = () => {
           </div>
 
           {/* Bottom light section - contact details */}
-          <div className="bg-[hsl(230,25%,94%)] px-8 lg:px-14 pt-20 lg:pt-28 pb-10">
-            <div className="max-w-2xl space-y-6">
-              <div className="flex items-start gap-5">
-                <Phone size={20} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
+          <div className="bg-[hsl(230,25%,94%)] px-8 lg:px-14 pt-10 lg:pt-14 pb-8">
+            <div className="max-w-2xl space-y-4">
+              <div className="flex items-start gap-4">
+                <Phone size={18} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
                 <div>
-                  <h4 className="font-bold text-[hsl(240,20%,15%)] text-[15px] mb-0.5">Call us at:</h4>
+                  <h4 className="font-bold text-[hsl(240,20%,15%)] text-sm mb-0.5">Call us at:</h4>
                   <p className="text-[hsl(230,10%,35%)] text-sm">8074666415 | 9676133441</p>
                 </div>
               </div>
-              <div className="flex items-start gap-5">
-                <Mail size={20} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
+              <div className="flex items-start gap-4">
+                <Mail size={18} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
                 <div>
-                  <h4 className="font-bold text-[hsl(240,20%,15%)] text-[15px] mb-0.5">Email:</h4>
+                  <h4 className="font-bold text-[hsl(240,20%,15%)] text-sm mb-0.5">Email:</h4>
                   <p className="text-[hsl(230,10%,35%)] text-sm">sitenexa21@gmail.com</p>
                 </div>
               </div>
-              <div className="flex items-start gap-5">
-                <Globe size={20} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
+              <div className="flex items-start gap-4">
+                <Globe size={18} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
                 <div>
-                  <h4 className="font-bold text-[hsl(240,20%,15%)] text-[15px] mb-0.5">Website:</h4>
+                  <h4 className="font-bold text-[hsl(240,20%,15%)] text-sm mb-0.5">Website:</h4>
                   <p className="text-[hsl(230,10%,35%)] text-sm">www.sitenexa.in</p>
                 </div>
               </div>
-              <div className="flex items-start gap-5">
-                <User size={20} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
+              <div className="flex items-start gap-4">
+                <User size={18} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
                 <div>
-                  <h4 className="font-bold text-[hsl(240,20%,15%)] text-[15px] mb-0.5">Contact Person:</h4>
+                  <h4 className="font-bold text-[hsl(240,20%,15%)] text-sm mb-0.5">Contact Person:</h4>
                   <p className="text-[hsl(230,10%,35%)] text-sm">Manmadha</p>
                 </div>
               </div>
