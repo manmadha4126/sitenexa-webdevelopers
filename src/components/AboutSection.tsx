@@ -19,7 +19,7 @@ const AboutSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="about" className="section-light py-24 lg:py-32" ref={ref}>
+    <section id="about" className="section-light py-24 lg:py-32 my-[3px]" ref={ref}>
       <div className="container">
         <div className="max-w-3xl mb-16">
           <span
