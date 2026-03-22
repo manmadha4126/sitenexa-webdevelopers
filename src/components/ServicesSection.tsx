@@ -90,8 +90,8 @@ const ServicesSection = () => {
         <div className="text-center">
           <a
             href="tel:+918074666415"
-            className="inline-flex items-center gap-3 bg-white text-[hsl(192,70%,28%)] px-8 py-4 rounded-full text-base font-bold tracking-wide hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-[0.97]">
-            
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-base font-bold tracking-wide hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-[0.97] text-center bg-yellow-500 text-popover-foreground"> Book a Strategy Call
+
             <Phone size={20} />
             Book a Strategy Call
           </a>
