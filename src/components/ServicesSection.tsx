@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Globe, Palette, Code2, Wrench } from "lucide-react";
+import { Globe, Palette, Code2, Wrench, Users, ShoppingCart, Brain, Database, Phone } from "lucide-react";
 
 const services = [
   {
@@ -21,6 +21,26 @@ const services = [
     icon: Wrench,
     title: "Maintenance & Support",
     desc: "Ongoing technical support, updates, and optimization to keep your digital products running smoothly.",
+  },
+  {
+    icon: Users,
+    title: "Customer CRM Development",
+    desc: "Build powerful CRM systems that streamline customer relationships and boost retention rates.",
+  },
+  {
+    icon: ShoppingCart,
+    title: "E-Commerce Development",
+    desc: "Scalable online stores with seamless checkout, inventory management, and payment integrations.",
+  },
+  {
+    icon: Brain,
+    title: "AI Solutions",
+    desc: "Integrate intelligent automation, chatbots, and machine learning to supercharge your business workflows.",
+  },
+  {
+    icon: Database,
+    title: "Cloud/Database Platforms",
+    desc: "Robust cloud infrastructure and database solutions for reliable, scalable data management.",
   },
 ];
 
@@ -48,22 +68,33 @@ const ServicesSection = () => {
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((s, i) => (
-            <div
-              key={s.title}
-              className={`group relative p-8 rounded-lg bg-white border border-[hsl(210,20%,90%)] hover:scale-105 hover:shadow-2xl hover:shadow-white/15 transition-all duration-300 cursor-pointer ${
-                isVisible ? "animate-fade-up" : "opacity-0"
-              }`}
-              style={{ animationDelay: `${200 + i * 80}ms` }}
-            >
-              <div className="w-14 h-14 rounded-lg bg-[hsl(192,70%,90%)] group-hover:bg-[hsl(192,70%,28%)]/15 flex items-center justify-center mb-6 transition-colors duration-200">
-                <s.icon size={26} className="text-[hsl(192,70%,28%)] group-hover:text-[hsl(192,70%,35%)]" />
+        {/* Auto-scrolling cards */}
+        <div className="overflow-hidden mb-12">
+          <div className="flex gap-6 animate-scroll-left-fast">
+            {[...services, ...services].map((s, i) => (
+              <div
+                key={`svc-${i}`}
+                className="group relative p-8 rounded-lg bg-white border border-[hsl(210,20%,90%)] hover:scale-105 hover:shadow-2xl hover:shadow-white/15 transition-all duration-300 cursor-pointer flex-shrink-0 w-[280px]"
+              >
+                <div className="w-14 h-14 rounded-lg bg-[hsl(30,95%,92%)] group-hover:bg-[hsl(30,95%,85%)] flex items-center justify-center mb-6 transition-colors duration-200">
+                  <s.icon size={26} className="text-[hsl(30,95%,50%)]" />
+                </div>
+                <h3 className="text-lg font-semibold mb-3 text-[hsl(210,60%,15%)] transition-colors duration-200">{s.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed transition-colors duration-200">{s.desc}</p>
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-[hsl(210,60%,15%)] transition-colors duration-200">{s.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed transition-colors duration-200">{s.desc}</p>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Book a Call */}
+        <div className="text-center">
+          <a
+            href="tel:+918074666415"
+            className="inline-flex items-center gap-3 bg-white text-[hsl(192,70%,28%)] px-8 py-4 rounded-full text-base font-bold tracking-wide hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-[0.97]"
+          >
+            <Phone size={20} />
+            Book a Strategy Call
+          </a>
         </div>
       </div>
     </section>
