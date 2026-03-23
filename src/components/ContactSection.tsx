@@ -101,7 +101,7 @@ const ContactSection = () => {
 
           {/* Schedule form card - positioned in the middle of dark/light split */}
           <div className="absolute right-8 lg:right-14 top-1/2 -translate-y-1/2 z-20">
-            <div className="bg-white rounded-xl shadow-2xl shadow-black/10 p-6 lg:p-7 max-w-sm w-[340px]">
+            <div className="bg-white rounded-xl shadow-2xl shadow-black/10 p-6 lg:p-7 max-w-sm w-[340px] mx-[90px] my-0">
               <h3 className="text-[hsl(260,65%,45%)] text-base font-bold text-center mb-0.5">Schedule a Free Consultation</h3>
               <p className="text-center text-lg mb-3">🤝</p>
               <hr className="border-[hsl(230,20%,88%)] mb-4" />
