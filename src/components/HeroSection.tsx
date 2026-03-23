@@ -9,8 +9,8 @@ const HeroSection = () => {
         src={heroBg}
         alt=""
         className="absolute inset-0 w-full h-full object-cover opacity-40"
-        loading="eager"
-      />
+        loading="eager" />
+      
       {/* Gradient mesh overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,40%,12%)/60] via-transparent to-[hsl(260,30%,10%)/40]" />
       <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,20%,6%)] via-transparent to-transparent" />
@@ -27,42 +27,42 @@ const HeroSection = () => {
       <div className="container relative z-10 pt-36 pb-28">
         <div className="max-w-4xl">
           <h1
-            className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold leading-[0.95] tracking-tight mb-8 opacity-0 animate-fade-up text-white"
-            style={{ animationDelay: "400ms" }}
-          >
+            className="text-5xl sm:text-6xl leading-[0.95] tracking-tight mb-8 opacity-0 animate-fade-up text-white lg:text-6xl font-serif font-extrabold"
+            style={{ animationDelay: "400ms" }}>
+            
             Web Development &
-            <span className="block text-accent mt-2">Software Solutions</span>
+            <span className="block mt-2 text-slate-400">Software Solutions</span>
           </h1>
 
           <p
             className="text-[hsl(220,10%,65%)] text-lg sm:text-xl max-w-2xl leading-relaxed mb-12 opacity-0 animate-fade-up"
-            style={{ animationDelay: "600ms" }}
-          >
+            style={{ animationDelay: "600ms" }}>
+            
             Sitenexa delivers next-generation web solutions — from stunning interfaces to scalable platforms — built to set your brand apart in a competitive digital landscape.
           </p>
 
           <div
             className="flex flex-wrap gap-5 opacity-0 animate-fade-up"
-            style={{ animationDelay: "800ms" }}
-          >
+            style={{ animationDelay: "800ms" }}>
+            
             <a
               href="#portfolio"
-              className="inline-flex items-center gap-2.5 bg-accent text-accent-foreground px-8 py-4 rounded-full text-sm font-bold tracking-wide hover:shadow-[0_0_30px_hsl(var(--accent)/0.3)] transition-shadow duration-300 active:scale-[0.97]"
-            >
+              className="inline-flex items-center gap-2.5 bg-accent text-accent-foreground px-8 py-4 rounded-full text-sm font-bold tracking-wide hover:shadow-[0_0_30px_hsl(var(--accent)/0.3)] transition-shadow duration-300 active:scale-[0.97]">
+              
               Explore Our Work
               <ArrowRight size={16} />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 border border-white/15 text-white px-8 py-4 rounded-full text-sm font-semibold tracking-wide hover:bg-white/5 hover:border-white/25 transition-all duration-300 active:scale-[0.97]"
-            >
+              className="inline-flex items-center gap-2 border border-white/15 text-white px-8 py-4 rounded-full text-sm font-semibold tracking-wide hover:bg-white/5 hover:border-white/25 transition-all duration-300 active:scale-[0.97]">
+              
               Start a Project
             </a>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
