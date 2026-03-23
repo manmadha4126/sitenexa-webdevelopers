@@ -9,24 +9,21 @@ const features = [
 { icon: Zap, title: "Speed & Motion", desc: "Lightning-fast performance coupled with meaningful interactive animations for a premium user feel." },
 { icon: Wrench, title: "Full-Stack Maker", desc: "End-to-end expertise providing a seamless bridge from conceptual design to robust technical launch." }];
 
-
 const cardStyles = [
 "bg-[hsl(0,0%,90%)] border border-[hsl(0,0%,82%)] text-[hsl(210,60%,15%)]",
 "bg-[hsl(210,50%,95%)] border border-[hsl(210,40%,88%)] text-[hsl(210,60%,15%)]"];
-
 
 const AboutSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="about" className="section-light py-24 lg:py-32 my-[3px]" ref={ref}>
+    <section id="about" className="section-light py-16 lg:py-20 my-[3px]" ref={ref}>
       <div className="container">
         <div className="max-w-3xl mb-16">
           <span
             className={`inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
             isVisible ? "animate-fade-up" : "opacity-0"}`
             }>
-            
             About Us
           </span>
           <h2
@@ -34,7 +31,6 @@ const AboutSection = () => {
             isVisible ? "animate-fade-up" : "opacity-0"}`
             }
             style={{ animationDelay: "100ms" }}>
-            
             Tailored Digital Excellence....
           </h2>
           <p
@@ -42,7 +38,6 @@ const AboutSection = () => {
             isVisible ? "animate-fade-up" : "opacity-0"}`
             }
             style={{ animationDelay: "200ms" }}>
-            
             Sitenexa is a next generation web solutions driven by a passion for building impactful digital experiences. We combine design thinking with technical expertise to help businesses thrive in the digital landscape.
           </p>
         </div>
@@ -56,19 +51,16 @@ const AboutSection = () => {
                 isVisible ? "animate-fade-up" : "opacity-0"}`
                 }
                 style={{ animationDelay: `${300 + i * 80}ms` }}>
-                
                 <div className={`w-14 h-14 rounded-xl bg-[hsl(205,60%,92%)] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-200`}>
                   <f.icon size={26} className="text-[hsl(210,60%,35%)]" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{f.title}</h3>
                 <p className="leading-relaxed text-base text-sidebar-foreground">{f.desc}</p>
               </div>);
-
           })}
         </div>
       </div>
     </section>);
-
 };
 
 export default AboutSection;

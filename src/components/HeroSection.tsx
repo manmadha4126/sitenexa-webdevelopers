@@ -1,5 +1,6 @@
 import heroBg from "@/assets/hero-office-bg.jpg";
-import { ArrowRight, Sparkles } from "lucide-react";
+import logo from "@/assets/logo.png";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -7,34 +8,30 @@ const HeroSection = () => {
       <img
         src={heroBg}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-25"
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
         loading="eager"
       />
       {/* Gradient mesh overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,40%,12%)/80] via-transparent to-[hsl(260,30%,10%)/60]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,40%,12%)/60] via-transparent to-[hsl(260,30%,10%)/40]" />
       <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,20%,6%)] via-transparent to-transparent" />
+
+      {/* Logo above SITENEXA name on right side */}
+      <div className="absolute right-16 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4 opacity-20 pointer-events-none hidden lg:flex">
+        <img src={logo} alt="" className="w-24 h-24" />
+        <span className="font-display text-white text-6xl font-bold tracking-[0.2em] [writing-mode:vertical-lr]">SITENEXA</span>
+      </div>
 
       {/* Decorative accent line */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-40" />
 
       <div className="container relative z-10 pt-36 pb-28">
         <div className="max-w-4xl">
-          <div
-            className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 mb-8 opacity-0 animate-fade-up"
-            style={{ animationDelay: "200ms" }}
-          >
-            <Sparkles size={14} className="text-accent" />
-            <span className="text-accent text-xs font-semibold uppercase tracking-[0.15em]">
-              Next Generation Web Solutions
-            </span>
-          </div>
-
           <h1
             className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold leading-[0.95] tracking-tight mb-8 opacity-0 animate-fade-up text-white"
             style={{ animationDelay: "400ms" }}
           >
-            Crafting Digital
-            <span className="block text-accent mt-2">Masterpieces</span>
+            Web Development &
+            <span className="block text-accent mt-2">Software Solutions</span>
           </h1>
 
           <p
@@ -63,7 +60,6 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-
       </div>
     </section>
   );
