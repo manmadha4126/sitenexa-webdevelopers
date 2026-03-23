@@ -2,21 +2,21 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Star } from "lucide-react";
 
 const row1 = [
-  { quote: "Sitenexa completely transformed our online presence. The website they built for us looks phenomenal and has directly increased our lead generation by 40%.", name: "Priya Sharma", role: "Founder, BrightEdge Marketing", initials: "PS" },
-  { quote: "Working with the Sitenexa team felt like a true partnership. They understood our vision instantly and delivered a product that exceeded all our expectations.", name: "Rahul Menon", role: "CTO, CloudNest Technologies", initials: "RM" },
-  { quote: "Their attention to detail is unmatched. Every interaction, every animation — it all feels intentional. Our customers constantly compliment the design.", name: "Ananya Desai", role: "Director, Luxora Interiors", initials: "AD" },
-  { quote: "Fast turnaround, professional communication, and a final product that speaks for itself. I've recommended Sitenexa to three other businesses already.", name: "Vikram Patel", role: "CEO, TradeSync Solutions", initials: "VP" },
-  { quote: "The team at Sitenexa brought a level of creativity and precision we hadn't experienced before. Our e-commerce conversion rate jumped 35% after launch.", name: "Meera Kapoor", role: "Head of Digital, StyleVault", initials: "MK" },
-  { quote: "From concept to deployment, Sitenexa handled everything with remarkable professionalism. They truly understand the intersection of design and business strategy.", name: "Arjun Nair", role: "Managing Partner, Pinnacle Advisors", initials: "AN" },
+  { quote: "Sitenexa completely transformed our online presence. The website they built for us looks phenomenal and has directly increased our lead generation by 40%.", name: "Priya Sharma", role: "Founder, BrightEdge Marketing", initials: "PS", avatar: "https://randomuser.me/api/portraits/women/44.jpg" },
+  { quote: "Working with the Sitenexa team felt like a true partnership. They understood our vision instantly and delivered a product that exceeded all our expectations.", name: "Rahul Menon", role: "CTO, CloudNest Technologies", initials: "RM", avatar: "https://randomuser.me/api/portraits/men/32.jpg" },
+  { quote: "Their attention to detail is unmatched. Every interaction, every animation — it all feels intentional. Our customers constantly compliment the design.", name: "Ananya Desai", role: "Director, Luxora Interiors", initials: "AD", avatar: "https://randomuser.me/api/portraits/women/68.jpg" },
+  { quote: "Fast turnaround, professional communication, and a final product that speaks for itself. I've recommended Sitenexa to three other businesses already.", name: "Vikram Patel", role: "CEO, TradeSync Solutions", initials: "VP", avatar: "https://randomuser.me/api/portraits/men/75.jpg" },
+  { quote: "The team at Sitenexa brought a level of creativity and precision we hadn't experienced before. Our e-commerce conversion rate jumped 35% after launch.", name: "Meera Kapoor", role: "Head of Digital, StyleVault", initials: "MK", avatar: "https://randomuser.me/api/portraits/women/65.jpg" },
+  { quote: "From concept to deployment, Sitenexa handled everything with remarkable professionalism. They truly understand the intersection of design and business strategy.", name: "Arjun Nair", role: "Managing Partner, Pinnacle Advisors", initials: "AN", avatar: "https://randomuser.me/api/portraits/men/46.jpg" },
 ];
 
 const row2 = [
-  { quote: "We needed a complex dashboard built in record time. Sitenexa delivered ahead of schedule with a polished UI that our internal team absolutely loves.", name: "Deepa Iyer", role: "VP Engineering, DataForge", initials: "DI" },
-  { quote: "Sitenexa doesn't just build websites — they build experiences. Our bounce rate dropped by half after the redesign they did for us.", name: "Karthik Reddy", role: "Founder, GreenLeaf Organics", initials: "KR" },
-  { quote: "What impressed me most was their post-launch support. They didn't just deliver and disappear — they've been a true partner in our growth.", name: "Sanya Gupta", role: "COO, UrbanNest Realty", initials: "SG" },
-  { quote: "Their design sensibility is on another level. The website they created feels premium, modern, and perfectly aligned with our brand identity.", name: "Rohan Bhatia", role: "Creative Director, Lumino Studios", initials: "RB" },
-  { quote: "Sitenexa helped us migrate from an outdated platform to a blazing-fast modern stack. The performance improvement was night and day.", name: "Nisha Verma", role: "CTO, FinEdge Technologies", initials: "NV" },
-  { quote: "Outstanding quality at a fair price. Sitenexa proved that you don't need a massive budget to get world-class digital work.", name: "Amit Joshi", role: "Founder, CraftBrew Co.", initials: "AJ" },
+  { quote: "We needed a complex dashboard built in record time. Sitenexa delivered ahead of schedule with a polished UI that our internal team absolutely loves.", name: "Deepa Iyer", role: "VP Engineering, DataForge", initials: "DI", avatar: "https://randomuser.me/api/portraits/women/52.jpg" },
+  { quote: "Sitenexa doesn't just build websites — they build experiences. Our bounce rate dropped by half after the redesign they did for us.", name: "Karthik Reddy", role: "Founder, GreenLeaf Organics", initials: "KR", avatar: "https://randomuser.me/api/portraits/men/22.jpg" },
+  { quote: "What impressed me most was their post-launch support. They didn't just deliver and disappear — they've been a true partner in our growth.", name: "Sanya Gupta", role: "COO, UrbanNest Realty", initials: "SG", avatar: "https://randomuser.me/api/portraits/women/33.jpg" },
+  { quote: "Their design sensibility is on another level. The website they created feels premium, modern, and perfectly aligned with our brand identity.", name: "Rohan Bhatia", role: "Creative Director, Lumino Studios", initials: "RB", avatar: "https://randomuser.me/api/portraits/men/55.jpg" },
+  { quote: "Sitenexa helped us migrate from an outdated platform to a blazing-fast modern stack. The performance improvement was night and day.", name: "Nisha Verma", role: "CTO, FinEdge Technologies", initials: "NV", avatar: "https://randomuser.me/api/portraits/women/41.jpg" },
+  { quote: "Outstanding quality at a fair price. Sitenexa proved that you don't need a massive budget to get world-class digital work.", name: "Amit Joshi", role: "Founder, CraftBrew Co.", initials: "AJ", avatar: "https://randomuser.me/api/portraits/men/64.jpg" },
 ];
 
 const TestimonialCard = ({ t }: { t: typeof row1[0] }) => (
@@ -28,9 +28,12 @@ const TestimonialCard = ({ t }: { t: typeof row1[0] }) => (
     </div>
     <p className="text-white/80 leading-relaxed mb-6 italic text-sm">"{t.quote}"</p>
     <div className="flex items-center gap-3">
-      <div className="w-10 h-10 rounded-full bg-[hsl(200,80%,50%)] flex items-center justify-center text-white text-xs font-bold">
-        {t.initials}
-      </div>
+      <img
+        src={t.avatar}
+        alt={t.name}
+        className="w-10 h-10 rounded-full object-cover border-2 border-[hsl(200,80%,50%)]"
+        loading="lazy"
+      />
       <div>
         <div className="font-semibold text-sm text-white">{t.name}</div>
         <div className="text-white/50 text-xs">{t.role}</div>

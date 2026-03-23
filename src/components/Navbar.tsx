@@ -40,7 +40,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="text-primary-foreground/70 hover:text-primary-foreground text-sm tracking-wide uppercase transition-colors duration-200"
+              className="text-primary-foreground/70 hover:text-primary-foreground text-sm tracking-wide uppercase transition-colors duration-200 px-3 py-1.5 rounded-lg backdrop-blur-sm bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/25"
             >
               {l.label}
             </a>
@@ -72,7 +72,7 @@ const Navbar = () => {
                 key={l.href}
                 href={l.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-primary-foreground/80 hover:text-primary-foreground text-base py-2 transition-colors"
+                className="text-primary-foreground/80 hover:text-primary-foreground text-base py-2 transition-colors px-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
               >
                 {l.label}
               </a>

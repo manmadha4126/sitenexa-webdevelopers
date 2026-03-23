@@ -1,4 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useState } from "react";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -9,10 +10,10 @@ import myProject3 from "@/assets/my-project-3.jpg";
 import { ExternalLink, Phone } from "lucide-react";
 
 const projects = [
-  { img: project1, title: "LuxeCart E-Commerce", category: "Web Development", desc: "Premium online shopping experience." },
-  { img: project2, title: "DataPulse Dashboard", category: "Software Solution", desc: "Real-time analytics platform." },
-  { img: myProject1, title: "VitalTrack App", category: "Mobile App Design", desc: "Health & fitness tracking app." },
-  { img: project4, title: "Savora Restaurant", category: "Website Design", desc: "Fine dining digital presence." },
+  { img: project1, title: "LuxeCart E-Commerce", category: "Web Development", desc: "Premium online shopping experience.", backDesc: "Built with React & Node.js. Features include real-time inventory, payment gateway integration, and responsive design." },
+  { img: project2, title: "DataPulse Dashboard", category: "Software Solution", desc: "Real-time analytics platform.", backDesc: "Enterprise analytics with live data visualization, custom reports, role-based access, and API integrations." },
+  { img: myProject1, title: "VitalTrack App", category: "Mobile App Design", desc: "Health & fitness tracking app.", backDesc: "Cross-platform mobile app with workout plans, nutrition tracking, progress charts, and wearable sync." },
+  { img: project4, title: "Savora Restaurant", category: "Website Design", desc: "Fine dining digital presence.", backDesc: "Elegant restaurant website with online reservations, menu management, and Google Maps integration." },
 ];
 
 const myProjects = [
@@ -26,7 +27,54 @@ const myProjects = [
   { img: myProject2, title: "ArtVault Gallery", category: "Creative Portfolio", desc: "Digital art showcase with immersive 3D viewing." },
   { img: myProject3, title: "FitPulse Tracker", category: "Health & Wellness", desc: "Fitness tracking app with personalized workout plans." },
   { img: project1, title: "CodeNest IDE", category: "Developer Tools", desc: "Cloud-based code editor with real-time collaboration." },
+  { img: project3, title: "V2V Solutions", category: "Cab Services", desc: "Smart cab booking platform. Website: v2vsolutions.online" },
 ];
+
+const FlipCard = ({ p, i, isVisible }: { p: typeof projects[0]; i: number; isVisible: boolean }) => {
+  const [flipped, setFlipped] = useState(false);
+
+  return (
+    <div
+      className={`group cursor-pointer ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+      style={{ animationDelay: `${200 + i * 80}ms`, perspective: "1000px" }}
+      onClick={() => setFlipped(!flipped)}
+    >
+      <div
+        className="relative w-full transition-transform duration-700"
+        style={{
+          transformStyle: "preserve-3d",
+          transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+        }}
+      >
+        {/* Front */}
+        <div className="relative overflow-hidden rounded-lg border-2 border-[hsl(210,20%,85%)] hover:border-[hsl(200,80%,50%)] transition-all duration-300" style={{ backfaceVisibility: "hidden" }}>
+          <div className="aspect-[4/3] overflow-hidden">
+            <img src={p.img} alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          </div>
+          <div className="p-4 bg-white">
+            <p className="text-accent text-xs uppercase tracking-widest mb-1 font-semibold">{p.category}</p>
+            <h3 className="text-[hsl(210,60%,10%)] text-base font-semibold mb-0.5">{p.title}</h3>
+            <p className="text-muted-foreground text-xs">{p.desc}</p>
+          </div>
+          <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+            <ExternalLink size={16} className="text-white drop-shadow-lg" />
+          </div>
+        </div>
+
+        {/* Back */}
+        <div
+          className="absolute inset-0 rounded-lg border-2 border-[hsl(200,80%,50%)] bg-[hsl(210,60%,10%)] text-white p-6 flex flex-col justify-center items-center text-center"
+          style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+        >
+          <h3 className="text-lg font-bold mb-2">{p.title}</h3>
+          <p className="text-xs uppercase tracking-widest text-accent mb-4">{p.category}</p>
+          <p className="text-white/80 text-sm leading-relaxed">{p.backDesc}</p>
+          <span className="mt-4 text-accent text-xs font-semibold">Click to flip back</span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const PortfolioSection = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -61,37 +109,14 @@ const PortfolioSection = () => {
           </p>
         </div>
 
-        {/* 4 cards - decreased height, borders, data visible */}
+        {/* 4 flip cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           {projects.map((p, i) => (
-            <div
-              key={p.title}
-              className={`group relative overflow-hidden rounded-lg cursor-pointer border-2 border-[hsl(210,20%,85%)] hover:border-[hsl(200,80%,50%)] transition-all duration-300 ${
-                isVisible ? "animate-fade-up" : "opacity-0"
-              }`}
-              style={{ animationDelay: `${200 + i * 80}ms` }}
-            >
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-              <div className="p-4 bg-white">
-                <p className="text-accent text-xs uppercase tracking-widest mb-1 font-semibold">{p.category}</p>
-                <h3 className="text-[hsl(210,60%,10%)] text-base font-semibold mb-0.5">{p.title}</h3>
-                <p className="text-muted-foreground text-xs">{p.desc}</p>
-              </div>
-              <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                <ExternalLink size={16} className="text-white drop-shadow-lg" />
-              </div>
-            </div>
+            <FlipCard key={p.title} p={p} i={i} isVisible={isVisible} />
           ))}
         </div>
 
-        {/* CTA buttons after project types */}
+        {/* CTA buttons */}
         <div className={`flex flex-wrap justify-center gap-5 mt-10 ${isVisible ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: "500ms" }}>
           <a
             href="#contact"
@@ -122,8 +147,8 @@ const PortfolioSection = () => {
 
         {/* Fast auto-scrolling project cards - continuous */}
         <div className="overflow-hidden">
-          <div className="flex gap-6 animate-scroll-left-fast">
-            {[...myProjects, ...myProjects].map((p, i) => (
+          <div className="flex gap-6 animate-scroll-left-fast" style={{ width: 'max-content' }}>
+            {[...myProjects, ...myProjects, ...myProjects].map((p, i) => (
               <div
                 key={`mp-${i}`}
                 className="group relative overflow-hidden rounded-xl cursor-pointer border border-border hover:shadow-xl hover:shadow-primary/5 transition-shadow duration-300 flex-shrink-0 w-[300px]"

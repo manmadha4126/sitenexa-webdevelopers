@@ -55,7 +55,6 @@ const ServicesSection = () => {
             className={`inline-block bg-white/20 text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
             isVisible ? "animate-fade-up" : "opacity-0"}`
             }>
-            
             What We Do
           </span>
           <h2
@@ -63,15 +62,14 @@ const ServicesSection = () => {
             isVisible ? "animate-fade-up" : "opacity-0"}`
             }
             style={{ animationDelay: "100ms" }}>
-            
             Services That Accelerate Your Growth
           </h2>
         </div>
 
-        {/* Auto-scrolling cards */}
+        {/* Auto-scrolling cards - continuous reel */}
         <div className="overflow-hidden mb-12">
-          <div className="flex gap-6 animate-scroll-left-fast">
-            {[...services, ...services].map((s, i) =>
+          <div className="flex gap-6 animate-scroll-left-fast" style={{ width: 'max-content' }}>
+            {[...services, ...services, ...services].map((s, i) =>
             <div
               key={`svc-${i}`}
               className="group relative p-8 bg-white border-[hsl(210,20%,90%)] hover:scale-105 hover:shadow-white/15 transition-all duration-300 cursor-pointer flex-shrink-0 w-[280px] border-2 border-solid rounded-xl shadow-inner">
@@ -90,15 +88,13 @@ const ServicesSection = () => {
         <div className="text-center">
           <a
             href="tel:+918074666415"
-            className="inline-flex items-center gap-3 bg-white text-[hsl(192,70%,28%)] px-8 py-4 rounded-full text-base font-bold tracking-wide hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-[0.97]">
-            
+            className="inline-flex items-center gap-3 bg-[hsl(50,100%,50%)] text-[hsl(0,0%,8%)] px-8 py-4 rounded-full text-base font-bold tracking-wide hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-[0.97]">
             <Phone size={20} />
             Book a Strategy Call
           </a>
         </div>
       </div>
     </section>);
-
 };
 
 export default ServicesSection;
