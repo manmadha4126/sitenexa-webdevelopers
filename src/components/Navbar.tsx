@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         <a href="#" className="flex items-center gap-3">
           <img src={logo} alt="Sitenexa" className="h-9 w-9" />
-          <span className="text-primary-foreground font-display text-2xl font-bold tracking-tight">Sitenexa</span>
+          <span className="text-primary-foreground font-bold tracking-tight text-4xl text-left font-serif border-0">Sitenexa</span>
         </a>
 
         {/* Desktop */}
