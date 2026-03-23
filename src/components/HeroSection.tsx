@@ -47,14 +47,14 @@ const HeroSection = () => {
             
             <a
               href="#portfolio"
-              className="inline-flex items-center gap-2.5 bg-accent text-accent-foreground px-8 py-4 rounded-full text-sm font-bold tracking-wide hover:shadow-[0_0_30px_hsl(var(--accent)/0.3)] transition-shadow duration-300 active:scale-[0.97]">
+              className="inline-flex items-center gap-2.5 text-accent-foreground px-8 py-4 rounded-full text-sm font-bold tracking-wide hover:shadow-[0_0_30px_hsl(var(--accent)/0.3)] transition-shadow duration-300 active:scale-[0.97] bg-orange-400">
               
               Explore Our Work
               <ArrowRight size={16} />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 border border-white/15 text-white px-8 py-4 rounded-full text-sm font-semibold tracking-wide hover:bg-white/5 hover:border-white/25 transition-all duration-300 active:scale-[0.97]">
+              className="inline-flex items-center gap-2 border border-white/15 text-white px-8 py-4 rounded-full text-sm font-semibold tracking-wide hover:border-white/25 transition-all duration-300 active:scale-[0.97] bg-teal-500">
               
               Start a Project
             </a>
