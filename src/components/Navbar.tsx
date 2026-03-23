@@ -40,7 +40,7 @@ const Navbar = () => {
           <a
             key={l.href}
             href={l.href}
-            className="text-primary-foreground/70 hover:text-primary-foreground text-sm tracking-wide uppercase transition-colors duration-200 px-3 py-1.5 rounded-lg backdrop-blur-sm bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/25">
+            className="text-sm tracking-wide uppercase transition-colors duration-200 px-3 py-1.5 rounded-lg backdrop-blur-sm bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/25 text-primary-foreground">
             
               {l.label}
             </a>
