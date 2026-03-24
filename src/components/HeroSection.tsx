@@ -32,16 +32,16 @@ const HeroSection = () => {
             className="text-lg sm:text-xl max-w-2xl leading-relaxed mb-12 opacity-0 animate-fade-up text-slate-200"
             style={{ animationDelay: "600ms" }}>
             
-            Sitenexa delivers next-generation web solutions — from stunning interfaces to scalable platforms — built to set your brand apart in a competitive digital landscape.
+            Sitenexa delivers next-generation web solutions — from stunning interfaces to scalable platforms — built to set your brand apart in a competitive digital landscape, driving growth, performance, and long-term success, ensuring measurable results and impactful user experiences, transforming ideas into powerful digital realities, helping you lead, innovate, and outperform the competition.   
+ 
+   
+          
           </p>
 
-          <div
-            className="flex flex-wrap gap-5 mb-10 opacity-0 animate-fade-up"
-            style={{ animationDelay: "800ms" }}>
+          <div className="flex flex-wrap gap-5 mb-10 opacity-0 animate-fade-up" style={{ animationDelay: "800ms" }}>
             
-            <a
-              href="#portfolio"
-              className="inline-flex items-center gap-2.5 text-accent-foreground px-8 py-4 rounded-full text-sm font-bold tracking-wide hover:shadow-[0_0_30px_hsl(var(--accent)/0.3)] transition-shadow duration-300 active:scale-[0.97] bg-orange-400">
+            <a href="#portfolio"
+            className="inline-flex items-center gap-2.5 text-accent-foreground px-8 py-4 rounded-full text-sm font-bold tracking-wide hover:shadow-[0_0_30px_hsl(var(--accent)/0.3)] transition-shadow duration-300 active:scale-[0.97] bg-orange-400">
               
               Explore Our Work
               <ArrowRight size={16} />
