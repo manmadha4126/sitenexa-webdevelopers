@@ -25,11 +25,11 @@ const HeroSection = () => {
             style={{ animationDelay: "400ms" }}>
             
             Web Development &
-            <span className="block mt-2 text-slate-400">Software Solutions</span>
+            <span className="block mt-2 text-slate-300">Software Solutions</span>
           </h1>
 
           <p
-            className="text-[hsl(220,10%,65%)] text-lg sm:text-xl max-w-2xl leading-relaxed mb-12 opacity-0 animate-fade-up"
+            className="text-lg sm:text-xl max-w-2xl leading-relaxed mb-12 opacity-0 animate-fade-up text-slate-200"
             style={{ animationDelay: "600ms" }}>
             
             Sitenexa delivers next-generation web solutions — from stunning interfaces to scalable platforms — built to set your brand apart in a competitive digital landscape.
@@ -57,7 +57,7 @@ const HeroSection = () => {
           {/* SITENEXA horizontal branding below CTA */}
           <div className="flex items-center gap-4 opacity-0 animate-fade-up" style={{ animationDelay: "1000ms" }}>
             <img src={logo} alt="Sitenexa" className="w-12 h-12" />
-            <span className="font-display text-white/20 text-4xl lg:text-5xl font-bold tracking-[0.25em]">SITENEXA</span>
+            <span className="font-display text-white/20 text-4xl lg:text-5xl font-bold tracking-[0.25em]">​</span>
           </div>
         </div>
       </div>
