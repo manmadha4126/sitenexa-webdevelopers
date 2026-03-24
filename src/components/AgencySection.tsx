@@ -13,7 +13,7 @@ const AgencySection = () => {
             <h2
               className={`font-display text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[0.95] text-[hsl(220,35%,15%)] uppercase ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
               
-              Web
+              Web{" "}
               <br />
               Solution
             </h2>
