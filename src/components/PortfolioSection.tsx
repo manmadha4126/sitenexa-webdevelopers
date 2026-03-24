@@ -7,6 +7,9 @@ import project4 from "@/assets/project-4.jpg";
 import myProject1 from "@/assets/my-project-1.jpg";
 import myProject2 from "@/assets/my-project-2.jpg";
 import myProject3 from "@/assets/my-project-3.jpg";
+import v2vImg from "@/assets/v2v-solutions.png";
+import vikshanaImg from "@/assets/vikshana-matrimony.png";
+import kalyanasuthraImg from "@/assets/kalyanasuthra-matrimony.png";
 import { ExternalLink, Phone } from "lucide-react";
 
 const projects = [
@@ -19,15 +22,14 @@ const projects = [
 const myProjects = [
   { img: myProject1, title: "FinFlow Analytics", category: "SaaS Dashboard", desc: "Enterprise analytics dashboard with real-time data visualization." },
   { img: myProject2, title: "PayWave Mobile", category: "Fintech App", desc: "Mobile banking application with seamless payments." },
-  { img: myProject3, title: "EduSpark Platform", category: "EdTech Portal", desc: "Online learning platform with interactive courses." },
+  { img: v2vImg, title: "V2V Solutions", category: "Cab Services", desc: "Smart cab booking platform. Website: v2vsolutions.online" },
   { img: project1, title: "HealthBridge Portal", category: "HealthTech", desc: "Patient management system with telemedicine features." },
   { img: project2, title: "TravelNest Booking", category: "Travel & Hospitality", desc: "Booking platform with dynamic pricing and reviews." },
   { img: project4, title: "CloudSync CRM", category: "Business Software", desc: "Customer relationship management with AI insights." },
-  { img: myProject1, title: "GreenMart Store", category: "E-Commerce", desc: "Sustainable shopping platform with eco-friendly products." },
-  { img: myProject2, title: "ArtVault Gallery", category: "Creative Portfolio", desc: "Digital art showcase with immersive 3D viewing." },
+  { img: vikshanaImg, title: "Vikshana Matrimony", category: "Matrimony Platform", desc: "Modern matchmaking platform with verified profiles." },
   { img: myProject3, title: "FitPulse Tracker", category: "Health & Wellness", desc: "Fitness tracking app with personalized workout plans." },
-  { img: project1, title: "CodeNest IDE", category: "Developer Tools", desc: "Cloud-based code editor with real-time collaboration." },
-  { img: project3, title: "V2V Solutions", category: "Cab Services", desc: "Smart cab booking platform. Website: v2vsolutions.online" },
+  { img: kalyanasuthraImg, title: "Kalyanasuthra Matrimony", category: "Matrimony Platform", desc: "Traditional matchmaking with a modern approach." },
+  { img: project3, title: "CodeNest IDE", category: "Developer Tools", desc: "Cloud-based code editor with real-time collaboration." },
 ];
 
 const FlipCard = ({ p, i, isVisible }: { p: typeof projects[0]; i: number; isVisible: boolean }) => {
@@ -37,7 +39,8 @@ const FlipCard = ({ p, i, isVisible }: { p: typeof projects[0]; i: number; isVis
     <div
       className={`group cursor-pointer ${isVisible ? "animate-fade-up" : "opacity-0"}`}
       style={{ animationDelay: `${200 + i * 80}ms`, perspective: "1000px" }}
-      onClick={() => setFlipped(!flipped)}
+      onMouseEnter={() => setFlipped(true)}
+      onMouseLeave={() => setFlipped(false)}
     >
       <div
         className="relative w-full transition-transform duration-700"
@@ -69,7 +72,6 @@ const FlipCard = ({ p, i, isVisible }: { p: typeof projects[0]; i: number; isVis
           <h3 className="text-lg font-bold mb-2">{p.title}</h3>
           <p className="text-xs uppercase tracking-widest text-accent mb-4">{p.category}</p>
           <p className="text-white/80 text-sm leading-relaxed">{p.backDesc}</p>
-          <span className="mt-4 text-accent text-xs font-semibold">Click to flip back</span>
         </div>
       </div>
     </div>
@@ -109,7 +111,7 @@ const PortfolioSection = () => {
           </p>
         </div>
 
-        {/* 4 flip cards */}
+        {/* 4 flip cards - hover to flip */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           {projects.map((p, i) => (
             <FlipCard key={p.title} p={p} i={i} isVisible={isVisible} />
@@ -145,9 +147,9 @@ const PortfolioSection = () => {
           </h2>
         </div>
 
-        {/* Fast auto-scrolling project cards - continuous */}
+        {/* Auto-scrolling project cards - slower speed, 10 projects */}
         <div className="overflow-hidden">
-          <div className="flex gap-6 animate-scroll-left-fast" style={{ width: 'max-content' }}>
+          <div className="flex gap-6 animate-scroll-left-medium" style={{ width: 'max-content' }}>
             {[...myProjects, ...myProjects, ...myProjects].map((p, i) => (
               <div
                 key={`mp-${i}`}
