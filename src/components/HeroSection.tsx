@@ -19,7 +19,7 @@ const HeroSection = () => {
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-40" />
 
       <div className="container relative z-10 pt-36 pb-28">
-        <div className="max-w-4xl">
+        <div className="max-w-4xl px-[40px] py-0 mx-[10px] my-[25px]">
           <h1
             className="text-5xl sm:text-6xl leading-[0.95] tracking-tight mb-8 opacity-0 animate-fade-up text-white lg:text-6xl font-serif font-extrabold"
             style={{ animationDelay: "400ms" }}>
@@ -32,7 +32,7 @@ const HeroSection = () => {
             className="text-lg sm:text-xl max-w-2xl leading-relaxed mb-12 opacity-0 animate-fade-up text-slate-200"
             style={{ animationDelay: "600ms" }}>
             
-            Sitenexa delivers next-generation web solutions — from stunning interfaces to scalable platforms — built to set your brand apart in a competitive digital landscape, driving growth, performance, and long-term success, ensuring measurable results and impactful user experiences, transforming ideas into powerful digital realities, helping you lead, innovate, and outperform the competition.   
+            Sitenexa delivers next-generation web solutions — from stunning interfaces to scalable platforms — built to set your brand apart in a competitive digital landscape, driving growth, performance, and long-term success, ensuring measurable results and impactful user experiences.    
  
    
           
