@@ -8,18 +8,12 @@ const HeroSection = () => {
       <img
         src={heroBg}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-40"
+        className="absolute inset-0 w-full h-full object-cover opacity-[0.65]"
         loading="eager" />
       
       {/* Gradient mesh overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,40%,12%)/60] via-transparent to-[hsl(260,30%,10%)/40]" />
       <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,20%,6%)] via-transparent to-transparent" />
-
-      {/* Logo above SITENEXA name on right side */}
-      <div className="absolute right-16 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4 opacity-20 pointer-events-none hidden lg:flex">
-        <img src={logo} alt="" className="w-24 h-24" />
-        <span className="font-display text-white text-6xl font-bold tracking-[0.2em] [writing-mode:vertical-lr]">SITENEXA</span>
-      </div>
 
       {/* Decorative accent line */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-40" />
@@ -42,7 +36,7 @@ const HeroSection = () => {
           </p>
 
           <div
-            className="flex flex-wrap gap-5 opacity-0 animate-fade-up"
+            className="flex flex-wrap gap-5 mb-10 opacity-0 animate-fade-up"
             style={{ animationDelay: "800ms" }}>
             
             <a
@@ -59,10 +53,15 @@ const HeroSection = () => {
               Start a Project
             </a>
           </div>
+
+          {/* SITENEXA horizontal branding below CTA */}
+          <div className="flex items-center gap-4 opacity-0 animate-fade-up" style={{ animationDelay: "1000ms" }}>
+            <img src={logo} alt="Sitenexa" className="w-12 h-12" />
+            <span className="font-display text-white/20 text-4xl lg:text-5xl font-bold tracking-[0.25em]">SITENEXA</span>
+          </div>
         </div>
       </div>
     </section>);
-
 };
 
 export default HeroSection;
