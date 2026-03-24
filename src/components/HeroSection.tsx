@@ -54,11 +54,6 @@ const HeroSection = () => {
             </a>
           </div>
 
-          {/* SITENEXA horizontal branding below CTA */}
-          <div className="flex items-center gap-4 opacity-0 animate-fade-up" style={{ animationDelay: "1000ms" }}>
-            <img src={logo} alt="Sitenexa" className="w-12 h-12" />
-            <span className="font-display text-white/20 text-4xl lg:text-5xl font-bold tracking-[0.25em]">​</span>
-          </div>
         </div>
       </div>
     </section>);
