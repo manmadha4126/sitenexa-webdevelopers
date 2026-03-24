@@ -11,8 +11,8 @@ const AgencySection = () => {
           {/* Left: Large heading + badge */}
           <div>
             <h2
-              className={`font-display text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[0.95] text-[hsl(220,35%,15%)] uppercase ${isVisible ? "animate-fade-up" : "opacity-0"}`}
-            >
+              className={`font-display text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[0.95] text-[hsl(220,35%,15%)] uppercase ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
+              
               Digital
               <br />
               Solution
@@ -36,9 +36,9 @@ const AgencySection = () => {
               </div>
               <h2
                 className={`font-display text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[0.95] text-[hsl(220,35%,15%)] uppercase ${isVisible ? "animate-fade-up" : "opacity-0"}`}
-                style={{ animationDelay: "100ms" }}
-              >
-                Agency
+                style={{ animationDelay: "100ms" }}>
+                
+                ​Agency
               </h2>
             </div>
           </div>
@@ -51,8 +51,8 @@ const AgencySection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AgencySection;
