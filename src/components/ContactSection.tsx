@@ -29,7 +29,7 @@ const ContactSection = () => {
           <div className="bg-[hsl(240,22%,13%)] px-8 lg:px-12 pt-6 pb-6">
             <div className="grid lg:grid-cols-2 gap-6 items-start">
               <div>
-                <span className="inline-block text-white text-[11px] font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-4 backdrop-blur-xl bg-white/10 border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.1),inset_0_1px_0_rgba(255,255,255,0.2)] hover:scale-110 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:bg-white/20 hover:border-white/50 transition-all duration-300 cursor-pointer">
+                <span className="inline-block text-white text-[11px] font-semibold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-4 bg-white/10 border border-white/20">
                   Contact Us
                 </span>
                 <h2 className="text-[1.8rem] lg:text-[2rem] tracking-tight leading-[1.15] text-white mb-4 font-normal font-serif">
