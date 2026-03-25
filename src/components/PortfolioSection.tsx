@@ -87,7 +87,7 @@ const PortfolioSection = () => {
         {/* Project Types heading - centered */}
         <div className="mb-16 text-center">
           <span
-            className={`inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
+            className={`inline-block text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 backdrop-blur-md bg-[hsl(200,80%,50%)]/15 border border-white/20 shadow-lg shadow-[hsl(200,80%,50%)]/10 ${
               isVisible ? "animate-fade-up" : "opacity-0"
             }`}
           >

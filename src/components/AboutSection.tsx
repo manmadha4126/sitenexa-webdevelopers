@@ -21,9 +21,9 @@ const AboutSection = () => {
       <div className="container">
         <div className="max-w-3xl mb-16">
           <span
-            className={`inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
+            className={`inline-block text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 backdrop-blur-md bg-white/10 border border-white/20 shadow-lg shadow-white/5 ${
             isVisible ? "animate-fade-up" : "opacity-0"}`
-            }>
+            } style={{ background: 'rgba(0, 150, 200, 0.15)' }}>
             About Us
           </span>
           <h2

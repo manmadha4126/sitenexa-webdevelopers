@@ -52,6 +52,12 @@ const HeroSection = () => {
               
               Start a Project
             </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 border border-white/15 text-white px-8 py-4 rounded-full text-sm font-semibold tracking-wide hover:border-white/25 hover:bg-white/10 transition-all duration-300 active:scale-[0.97] backdrop-blur-sm bg-white/5">
+              
+              Let's Connect With Us
+            </a>
           </div>
 
         </div>
