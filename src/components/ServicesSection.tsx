@@ -51,10 +51,10 @@ const ServicesSection = () => {
     <section id="services" className="py-24 lg:py-32 bg-[hsl(192,70%,28%)]" ref={ref}>
       <div className="container">
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <span className="bg-orange-500">
-
-
-            
+          <span
+            className={`inline-block text-white text-sm font-semibold uppercase tracking-[0.15em] px-5 py-2 rounded-full mb-6 bg-white/10 border border-white/20 transition-all duration-200 ${
+            isVisible ? "animate-fade-up" : "opacity-0"}`
+            }>
             What We Do
           </span>
           <h2

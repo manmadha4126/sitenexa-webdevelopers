@@ -20,10 +20,10 @@ const AboutSection = () => {
     <section id="about" className="section-light py-16 lg:py-20 my-[3px]" ref={ref}>
       <div className="container">
         <div className="max-w-3xl mb-16">
-          <span className="bg-orange-400">
-
-
-            
+          <span
+            className={`inline-block text-[hsl(210,60%,15%)] text-sm font-semibold uppercase tracking-[0.15em] px-5 py-2 rounded-full mb-6 bg-[hsl(210,40%,92%)] border border-[hsl(210,30%,85%)] transition-all duration-200 ${
+            isVisible ? "animate-fade-up" : "opacity-0"}`
+            }>
             About Us
           </span>
           <h2
