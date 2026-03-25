@@ -19,7 +19,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-10 lg:py-14 bg-white" ref={ref}>
-      <div className="max-w-5xl mx-auto px-6 lg:px-10">
+      <div className="max-w-6xl mx-auto px-4 lg:px-6">
         <div
           className={`relative rounded-2xl overflow-hidden border-4 border-white shadow-2xl ${
           isVisible ? "animate-fade-up" : "opacity-0"}`
