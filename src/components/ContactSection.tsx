@@ -19,7 +19,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-10 lg:py-14 bg-white" ref={ref}>
-      <div className="max-w-5xl mx-auto px-6 lg:px-10">
+      <div className="max-w-6xl mx-auto px-4 lg:px-6">
         <div
           className={`relative rounded-2xl overflow-hidden border-4 border-white shadow-2xl ${
           isVisible ? "animate-fade-up" : "opacity-0"}`
@@ -29,7 +29,7 @@ const ContactSection = () => {
           <div className="bg-[hsl(240,22%,13%)] px-8 lg:px-12 pt-6 pb-6">
             <div className="grid lg:grid-cols-2 gap-6 items-start">
               <div>
-                <span className="inline-block bg-[hsl(260,65%,52%)] text-white text-[11px] font-bold uppercase tracking-[0.2em] px-5 py-2 rounded mb-4">
+                <span className="inline-block text-white text-[11px] font-bold uppercase tracking-[0.2em] px-5 py-2 rounded mb-4 backdrop-blur-md bg-white/10 border border-white/20 shadow-lg shadow-white/5">
                   Contact Us
                 </span>
                 <h2 className="text-[1.8rem] lg:text-[2rem] tracking-tight leading-[1.15] text-white mb-4 font-normal font-serif">

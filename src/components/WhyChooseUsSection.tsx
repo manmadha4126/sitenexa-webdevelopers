@@ -40,7 +40,7 @@ const WhyChooseUsSection = () => {
       <div className="container">
         <div className="text-center max-w-5xl mx-auto mb-20">
           <span
-            className={`inline-block bg-[hsl(200,80%,50%)] text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 ${
+            className={`inline-block text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 backdrop-blur-md bg-white/10 border border-white/20 shadow-lg shadow-white/5 ${
               isVisible ? "animate-fade-up" : "opacity-0"
             }`}
           >
