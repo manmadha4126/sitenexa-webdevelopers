@@ -50,7 +50,7 @@ const TestimonialsSection = () => {
       <div className="container mb-8">
         <div className="text-center max-w-2xl mx-auto">
           <span
-            className={`inline-block text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 backdrop-blur-md bg-[hsl(200,80%,50%)]/15 border border-white/20 shadow-lg shadow-[hsl(200,80%,50%)]/10 ${
+            className={`inline-block text-[hsl(210,60%,15%)] text-base font-bold uppercase tracking-[0.15em] px-6 py-2.5 rounded-full mb-6 backdrop-blur-xl bg-white/40 border border-white/60 shadow-[0_0_20px_rgba(255,255,255,0.3),inset_0_1px_0_rgba(255,255,255,0.5)] hover:scale-110 hover:shadow-[0_0_30px_rgba(0,150,200,0.25),inset_0_1px_0_rgba(255,255,255,0.6)] hover:bg-white/50 hover:border-white/80 transition-all duration-300 cursor-pointer ${
               isVisible ? "animate-fade-up" : "opacity-0"
             }`}
           >

@@ -52,7 +52,7 @@ const ServicesSection = () => {
       <div className="container">
         <div className="text-center max-w-4xl mx-auto mb-16">
           <span
-            className={`inline-block text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2 rounded-full mb-6 backdrop-blur-md bg-white/10 border border-white/20 shadow-lg shadow-white/5 ${
+            className={`inline-block text-white text-base font-bold uppercase tracking-[0.15em] px-6 py-2.5 rounded-full mb-6 backdrop-blur-xl bg-white/10 border border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.1),inset_0_1px_0_rgba(255,255,255,0.2)] hover:scale-110 hover:shadow-[0_0_30px_rgba(255,255,255,0.2),inset_0_1px_0_rgba(255,255,255,0.3)] hover:bg-white/20 hover:border-white/50 transition-all duration-300 cursor-pointer ${
             isVisible ? "animate-fade-up" : "opacity-0"}`
             }>
             What We Do
