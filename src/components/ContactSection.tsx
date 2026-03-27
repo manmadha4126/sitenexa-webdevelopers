@@ -1,20 +1,49 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Mail, Phone, MapPin, Globe, User } from "lucide-react";
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect } from "react";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollReveal();
   const [sending, setSending] = useState(false);
 
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    // Get your public key from https://dashboard.emailjs.com/admin/account
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
-    setTimeout(() => {
-      setSending(false);
-      toast.success("Message sent! We'll get back to you soon.");
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    // Send email using EmailJS
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.get("name"),
+          from_email: formData.get("email"),
+          phone: formData.get("phone"),
+          message: formData.get("message"),
+          to_email: "sitenexa21@gmail.com",
+        }
+      )
+      .then(() => {
+        setSending(false);
+        toast.success("Message sent! We'll get back to you soon.");
+        form.reset();
+      })
+      .catch((error) => {
+        setSending(false);
+        console.error("Email send error:", error);
+        toast.error("Failed to send message. Please try again.");
+      });
   };
 
   return (
