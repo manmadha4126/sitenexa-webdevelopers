@@ -8,7 +8,7 @@ const HeroSection = () => {
       <img
         src={heroBg}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-90 object-right lg:object-center"
+        className="absolute inset-0 w-full h-full object-cover opacity-65 object-center"
         loading="eager" />
       
       {/* Gradient mesh overlay */}
