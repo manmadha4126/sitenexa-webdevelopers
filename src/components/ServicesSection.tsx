@@ -58,7 +58,7 @@ const ServicesSection = () => {
             What We Do
           </span>
           <h2
-            className={`font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-white whitespace-nowrap ${
+            className={`font-display text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight leading-[1.2] text-white ${
             isVisible ? "animate-fade-up" : "opacity-0"}`
             }
             style={{ animationDelay: "100ms" }}>
