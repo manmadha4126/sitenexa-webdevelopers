@@ -92,9 +92,9 @@ const ContactSection = () => {
 
           {/* Bottom light section with responsive form layout */}
           <div className="bg-[hsl(230,25%,94%)] px-4 sm:px-8 lg:px-12 pt-12 pb-10">
-            <div className="grid lg:grid-cols-2 gap-8 items-start">
+            <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-start">
               {/* Contact details - left side on desktop, top on mobile */}
-              <div className="max-w-2xl space-y-4">
+              <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <Phone size={16} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
                   <div>
