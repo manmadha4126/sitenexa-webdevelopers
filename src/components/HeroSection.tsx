@@ -21,7 +21,7 @@ const HeroSection = () => {
       <div className="container relative z-10 pt-36 pb-28 px-4 md:px-6">
         <div className="max-w-4xl px-0 md:px-[40px] py-0 mx-0 md:mx-[10px] my-[25px]">
           <h1
-            className="text-5xl sm:text-6xl leading-[0.95] tracking-tight mb-8 opacity-0 animate-fade-up text-white lg:text-6xl font-serif font-extrabold"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.95] tracking-tight mb-8 opacity-0 animate-fade-up text-white font-serif font-extrabold"
             style={{ animationDelay: "400ms" }}>
             
             Web Development &
