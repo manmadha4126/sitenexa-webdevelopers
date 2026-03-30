@@ -55,13 +55,13 @@ const ContactSection = () => {
           }>
           
           {/* Top dark section */}
-          <div className="bg-[hsl(240,22%,13%)] px-4 sm:px-8 lg:px-12 pt-6 pb-6">
-            <div className="grid lg:grid-cols-2 gap-6 items-start">
+          <div className="bg-[hsl(240,22%,13%)] px-3 sm:px-6 lg:px-12 pt-6 pb-6">
+            <div className="grid lg:grid-cols-2 gap-4 lg:gap-6 items-start">
               <div>
                 <span className="inline-block text-white text-[11px] font-semibold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-4 bg-white/10 border border-white/20">
                   Contact Us
                 </span>
-                <h2 className="text-[1.8rem] lg:text-[2rem] tracking-tight leading-[1.15] text-white mb-4 font-normal font-serif">
+                <h2 className="text-lg sm:text-[1.5rem] lg:text-[2rem] tracking-tight leading-[1.15] text-white mb-4 font-normal font-serif">
                   Connect with Us for
                   the Best & Perfect{" "}
                   <span className="text-[hsl(30,85%,65%)]">Web Solutions</span>
@@ -91,7 +91,7 @@ const ContactSection = () => {
           </div>
 
           {/* Bottom light section with responsive form layout */}
-          <div className="bg-[hsl(230,25%,94%)] px-4 sm:px-8 lg:px-12 pt-12 pb-10">
+          <div className="bg-[hsl(230,25%,94%)] px-3 sm:px-6 lg:px-12 pt-12 pb-10">
             <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-start">
               {/* Contact details - left side on desktop, top on mobile */}
               <div className="space-y-4">
