@@ -8,12 +8,12 @@ const HeroSection = () => {
       <img
         src={heroBg}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-75 object-right lg:object-center"
+        className="absolute inset-0 w-full h-full object-cover opacity-90 object-right lg:object-center"
         loading="eager" />
       
       {/* Gradient mesh overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,40%,12%)/40] via-transparent to-[hsl(260,30%,10%)/20]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,20%,6%)/60] via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,40%,12%)/20] via-transparent to-[hsl(260,30%,10%)/10]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,20%,6%)/40] via-transparent to-transparent" />
 
       {/* Decorative accent line */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-40" />
