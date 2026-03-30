@@ -47,7 +47,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-10 lg:py-14 bg-white" ref={ref}>
+    <section id="contact" className="py-10 lg:py-14 bg-white overflow-x-hidden" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div
           className={`relative rounded-2xl overflow-hidden border-4 border-white shadow-2xl ${
@@ -92,7 +92,7 @@ const ContactSection = () => {
 
           {/* Bottom light section with responsive form layout */}
           <div className="bg-[hsl(230,25%,94%)] px-3 sm:px-6 lg:px-12 pt-12 pb-10">
-            <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 items-start">
               {/* Contact details - left side on desktop, top on mobile */}
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -126,8 +126,8 @@ const ContactSection = () => {
               </div>
 
               {/* Schedule form card - right side on desktop, bottom on mobile */}
-              <div className="w-full lg:w-auto">
-                <div className="bg-white rounded-xl shadow-2xl shadow-black/10 p-6 lg:p-7 w-full lg:w-[380px]">
+              <div className="w-full">
+                <div className="bg-white rounded-xl shadow-2xl shadow-black/10 p-4 sm:p-6 lg:p-7 w-full lg:w-[380px]">
                   <h3 className="text-[hsl(260,65%,45%)] text-base font-bold text-center mb-0.5">Schedule a Free Consultation</h3>
                   <p className="text-center text-lg mb-3">🤝</p>
                   <hr className="border-[hsl(230,20%,88%)] mb-4" />
