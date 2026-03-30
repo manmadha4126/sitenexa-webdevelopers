@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[hsl(220,20%,8%)]">
+    <section className="relative min-h-screen flex items-center overflow-hidden overflow-x-hidden bg-[hsl(220,20%,8%)]">
       <img
         src={heroBg}
         alt=""
