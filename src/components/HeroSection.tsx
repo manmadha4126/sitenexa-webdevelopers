@@ -8,7 +8,7 @@ const HeroSection = () => {
       <img
         src={heroBg}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-[0.65]"
+        className="absolute inset-0 w-full h-full object-cover opacity-[0.65] object-right lg:object-center"
         loading="eager" />
       
       {/* Gradient mesh overlay */}
@@ -18,8 +18,8 @@ const HeroSection = () => {
       {/* Decorative accent line */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-40" />
 
-      <div className="container relative z-10 pt-36 pb-28">
-        <div className="max-w-4xl px-[40px] py-0 mx-[10px] my-[25px]">
+      <div className="container relative z-10 pt-36 pb-28 px-4 md:px-6">
+        <div className="max-w-4xl px-0 md:px-[40px] py-0 mx-0 md:mx-[10px] my-[25px]">
           <h1
             className="text-5xl sm:text-6xl leading-[0.95] tracking-tight mb-8 opacity-0 animate-fade-up text-white lg:text-6xl font-serif font-extrabold"
             style={{ animationDelay: "400ms" }}>
@@ -33,9 +33,6 @@ const HeroSection = () => {
             style={{ animationDelay: "600ms" }}>
             
             Sitenexa delivers next-generation web solutions — from stunning interfaces to scalable platforms — built to set your brand apart in a competitive digital landscape, driving growth, performance, and long-term success, ensuring measurable results and impactful user experiences.    
- 
-   
-          
           </p>
 
           <div className="flex flex-wrap gap-5 mb-10 opacity-0 animate-fade-up" style={{ animationDelay: "800ms" }}>

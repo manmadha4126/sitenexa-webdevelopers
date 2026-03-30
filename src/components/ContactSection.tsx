@@ -48,14 +48,14 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-10 lg:py-14 bg-white" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div
           className={`relative rounded-2xl overflow-hidden border-4 border-white shadow-2xl ${
           isVisible ? "animate-fade-up" : "opacity-0"}`
           }>
           
           {/* Top dark section */}
-          <div className="bg-[hsl(240,22%,13%)] px-8 lg:px-12 pt-6 pb-6">
+          <div className="bg-[hsl(240,22%,13%)] px-4 sm:px-8 lg:px-12 pt-6 pb-6">
             <div className="grid lg:grid-cols-2 gap-6 items-start">
               <div>
                 <span className="inline-block text-white text-[11px] font-semibold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-4 bg-white/10 border border-white/20">
@@ -90,77 +90,80 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Bottom light section */}
-          <div className="bg-[hsl(230,25%,94%)] px-8 lg:px-12 pt-12 pb-10">
-            <div className="max-w-2xl space-y-4">
-              <div className="flex items-start gap-4">
-                <Phone size={16} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
-                <div>
-                  <h4 className="font-bold text-[hsl(240,20%,15%)] text-sm mb-0.5">Call us at:</h4>
-                  <p className="text-[hsl(230,10%,35%)] text-sm">8074666415 | 9676133441</p>
+          {/* Bottom light section with responsive form layout */}
+          <div className="bg-[hsl(230,25%,94%)] px-4 sm:px-8 lg:px-12 pt-12 pb-10">
+            <div className="grid lg:grid-cols-2 gap-8 items-start">
+              {/* Contact details - left side on desktop, top on mobile */}
+              <div className="max-w-2xl space-y-4">
+                <div className="flex items-start gap-4">
+                  <Phone size={16} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
+                  <div>
+                    <h4 className="font-bold text-[hsl(240,20%,15%)] text-sm mb-0.5">Call us at:</h4>
+                    <p className="text-[hsl(230,10%,35%)] text-sm">8074666415 | 9676133441</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Mail size={16} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
+                  <div>
+                    <h4 className="font-bold text-[hsl(240,20%,15%)] text-sm mb-0.5">Email:</h4>
+                    <p className="text-[hsl(230,10%,35%)] text-sm">sitenexa21@gmail.com</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Globe size={16} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
+                  <div>
+                    <h4 className="font-bold text-[hsl(240,20%,15%)] text-sm mb-0.5">Website:</h4>
+                    <p className="text-[hsl(230,10%,35%)] text-sm">www.sitenexa.online</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <User size={16} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
+                  <div>
+                    <h4 className="font-bold text-[hsl(240,20%,15%)] text-sm mb-0.5">Contact Person:</h4>
+                    <p className="text-[hsl(230,10%,35%)] text-sm">Manmadha</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <Mail size={16} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
-                <div>
-                  <h4 className="font-bold text-[hsl(240,20%,15%)] text-sm mb-0.5">Email:</h4>
-                  <p className="text-[hsl(230,10%,35%)] text-sm">sitenexa21@gmail.com</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Globe size={16} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
-                <div>
-                  <h4 className="font-bold text-[hsl(240,20%,15%)] text-sm mb-0.5">Website:</h4>
-                  <p className="text-[hsl(230,10%,35%)] text-sm">www.sitenexa.online</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <User size={16} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
-                <div>
-                  <h4 className="font-bold text-[hsl(240,20%,15%)] text-sm mb-0.5">Contact Person:</h4>
-                  <p className="text-[hsl(230,10%,35%)] text-sm">Manmadha</p>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          {/* Schedule form card - wider */}
-          <div className="absolute right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20">
-            <div className="bg-white rounded-xl shadow-2xl shadow-black/10 p-6 lg:p-7 w-[380px]">
-              <h3 className="text-[hsl(260,65%,45%)] text-base font-bold text-center mb-0.5">Schedule a Free Consultation</h3>
-              <p className="text-center text-lg mb-3">🤝</p>
-              <hr className="border-[hsl(230,20%,88%)] mb-4" />
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <div>
-                  <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Full Name</label>
-                  <input
-                    name="name" type="text" required maxLength={100}
-                    className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all" />
+              {/* Schedule form card - right side on desktop, bottom on mobile */}
+              <div className="w-full lg:w-auto">
+                <div className="bg-white rounded-xl shadow-2xl shadow-black/10 p-6 lg:p-7 w-full lg:w-[380px]">
+                  <h3 className="text-[hsl(260,65%,45%)] text-base font-bold text-center mb-0.5">Schedule a Free Consultation</h3>
+                  <p className="text-center text-lg mb-3">🤝</p>
+                  <hr className="border-[hsl(230,20%,88%)] mb-4" />
+                  <form onSubmit={handleSubmit} className="space-y-3">
+                    <div>
+                      <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Full Name</label>
+                      <input
+                        name="name" type="text" required maxLength={100}
+                        className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all" />
+                    </div>
+                    <div>
+                      <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Email*</label>
+                      <input
+                        name="email" type="email" required maxLength={255}
+                        className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all" />
+                    </div>
+                    <div>
+                      <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Phone Number</label>
+                      <input
+                        name="phone" type="tel" maxLength={15}
+                        className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all" />
+                    </div>
+                    <div>
+                      <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Message</label>
+                      <textarea
+                        name="message" required maxLength={1000} rows={2}
+                        className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all resize-none" />
+                    </div>
+                    <button
+                      type="submit" disabled={sending}
+                      className="bg-[hsl(260,65%,48%)] text-white px-6 py-2 rounded-md text-sm font-semibold tracking-wide hover:bg-[hsl(260,65%,42%)] transition-colors active:scale-[0.97] disabled:opacity-60 w-full">
+                      {sending ? "Sending…" : "Submit"}
+                    </button>
+                  </form>
                 </div>
-                <div>
-                  <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Email*</label>
-                  <input
-                    name="email" type="email" required maxLength={255}
-                    className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all" />
-                </div>
-                <div>
-                  <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Phone Number</label>
-                  <input
-                    name="phone" type="tel" maxLength={15}
-                    className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all" />
-                </div>
-                <div>
-                  <label className="text-[hsl(200,70%,35%)] text-xs font-semibold mb-1 block">Message</label>
-                  <textarea
-                    name="message" required maxLength={1000} rows={2}
-                    className="w-full rounded-md bg-[hsl(230,30%,96%)] border border-[hsl(230,20%,90%)] px-3 py-2 text-sm text-[hsl(240,20%,15%)] outline-none focus:border-[hsl(260,70%,55%)] focus:ring-1 focus:ring-[hsl(260,70%,55%)]/30 transition-all resize-none" />
-                </div>
-                <button
-                  type="submit" disabled={sending}
-                  className="bg-[hsl(260,65%,48%)] text-white px-6 py-2 rounded-md text-sm font-semibold tracking-wide hover:bg-[hsl(260,65%,42%)] transition-colors active:scale-[0.97] disabled:opacity-60">
-                  {sending ? "Sending…" : "Submit"}
-                </button>
-              </form>
+              </div>
             </div>
           </div>
         </div>
