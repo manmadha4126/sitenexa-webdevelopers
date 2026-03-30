@@ -111,7 +111,7 @@ const ContactSection = () => {
                 <Globe size={16} className="text-[hsl(240,15%,30%)] mt-1 shrink-0" />
                 <div>
                   <h4 className="font-bold text-[hsl(240,20%,15%)] text-sm mb-0.5">Website:</h4>
-                  <p className="text-[hsl(230,10%,35%)] text-sm">www.sitenexa.in</p>
+                  <p className="text-[hsl(230,10%,35%)] text-sm">www.sitenexa.online</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
