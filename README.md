@@ -1,10 +1,10 @@
 # Sitenexa Web Developers
 
-🚀 **Sitenexa Web Developers** is a professional web development and software solutions platform focused on building modern, scalable, and user-friendly digital products.
+🚀 **Sitenexa Web Developers** is a professional web development and software solutions platform focused on building modern, scalable, and user-friendly digital products for businesses worldwide.
 
 ## 📌 About the Project
 
-This is the official website of Sitenexa, designed to showcase premium web development services, portfolio projects, and business solutions. Built with cutting-edge technologies for optimal performance and user experience.
+This is the official website of Sitenexa, designed to showcase premium web development services, portfolio projects, and business solutions. Built with cutting-edge technologies for optimal performance, user experience, and full mobile responsiveness. The site features modern design patterns, smooth animations, and responsive layouts that work beautifully across all devices.
 
 ## 🎯 Services Offered
 
@@ -83,7 +83,7 @@ Contributions are welcome! Please feel free to fork this repository and submit a
 
 - 📧 **Email**: sitenexa21@gmail.com
 - 📱 **Phone**: +91 8074666415 | +91 9676133441
-- 🌐 **Portfolio**: sitenexa.in
+- 🌐 **Portfolio**: www.sitenexa.online
 - 📸 **Instagram**: @sitenexa.in
 
 ## 📄 License
